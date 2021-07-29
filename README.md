@@ -16,23 +16,20 @@ others.
 
 ##### **Installation instructions**
 
-1.  At first you need to clone the git repository from GitHub, so you
-    > need to login to the GitHub portal and get the clone URL.\
+1.  At first you need to clone the git repository from GitHub, so youneed to login to the GitHub portal and get the clone URL.
     > ![](media/image3.png){width="6.5in" height="2.736111111111111in"}\
     > git clone git@github.com:365holdings/365hub.git
 
-2.  Then go to your project app directory and clone the site using the
-    > below command.\
+2.  Then go to your project app directory and clone the site using the below command.
     > git clone git@github.com:365holdings/365hub.git
 
-3.  Copy .env.example to new file .env using below command\
+3.  Copy .env.example to new file .env using below command
     > cp .env.example .env
 
-4.  Update the .env file with required information as per
-    > your configuration. Eg db connection details, smtp settings
+4.  Update the .env file with required information as per your configuration. Eg db connection details, smtp settings
     > details and domain
 
-5.  Then install external laravel packages using below command\
+5.  Then install external Laravel packages using below command
     > composer install
 
 6.  Generate a unique key for the project using below command\
@@ -230,38 +227,31 @@ fulfil.
 
 #### 
 
+
 #### **API Documentation**
 
-The following APIs belong to the Laravel routing. They are used
-throughout the system.
+The following APIs belong to the Laravel routing. They are used throughout the system.
 
 ##### **Sign Up**
 
 This API used for signing up into the system
 
-**POST api/sign-up**
+**POST**  **api/sign-up**
 
 **Request Parameter**
 
-  ------------------------------------------------------------------------------------------------
-  **Parameter**       **Validation**                                       **Description**
-  ------------------- ---------------------------------------------------- -----------------------
-  name                Required                                             Name of the user
-
-  emali               Required |                                           Email of the user
-                                                                           
-                      Should be a valid email | Should be a unique email   
-
-  password            Required                                             Password of the user
-
-  confirm\_password   Required | Should be same as password                Password confirmation
-  ------------------------------------------------------------------------------------------------
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the user |
+| emali | Required |Should be a valid email | Should be a unique email | Email of the user |
+| password | Required | Password of the user |
+| confirm\_password | Required | Should be same as password | Password confirmation |
 
 **Response**
 
 **{**
 
-**"success": "Register successful"**
+**&quot;success&quot;**** : ****&quot;Register successful&quot;**
 
 **}**
 
@@ -269,117 +259,112 @@ This API used for signing up into the system
 
 This API used for login into the system
 
-**POST api/login**
+**POST**  **api/login**
 
 **Request Parameter**
 
-  -------------------------------------------------------------
-  **Parameter**   **Validation**            **Description**
-  --------------- ------------------------- -------------------
-  name            Required                  Name of the user
-
-  emali           Required |                Email of the user
-                                            
-                  Should be a valid email   
-  -------------------------------------------------------------
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the user |
+| emali | Required |Should be a valid email | Email of the user |
 
 **Response**
 
 **{**
 
-**"auth\_token": "125|SUHBRtB3nDq0xfkZF0yLAE5dmv9UkfzMekCCwfn2",**
+**&quot;auth\_token&quot;**** : ****&quot;125|SUHBRtB3nDq0xfkZF0yLAE5dmv9UkfzMekCCwfn2&quot; ****,**
 
-**"token\_type": "Bearer",**
+**&quot;token\_type&quot;**** : ****&quot;Bearer&quot; ****,**
 
-**"message": "login successful",**
+**&quot;message&quot;**** : ****&quot;login successful&quot; ****,**
 
-**"user": {**
+**&quot;user&quot;**** : {**
 
-**"id": 24,**
+**&quot;id&quot;**** : **** 24 ****,**
 
-**"name": "Sd",**
+**&quot;name&quot;**** : ****&quot;Sd&quot; ****,**
 
-**"email": "sudipta.jana@codeclouds.in",**
+**&quot;email&quot;**** : ****&quot;sudipta.jana@codeclouds.in&quot; ****,**
 
-**"email\_verified\_at": null,**
+**&quot;email\_verified\_at&quot;**** : **** null ****,**
 
-**"deleted\_at": null,**
+**&quot;deleted\_at&quot;**** : **** null ****,**
 
-**"last\_login\_at": "2021-07-09T13:52:04.000000Z",**
+**&quot;last\_login\_at&quot;**** : ****&quot;2021-07-09T13:52:04.000000Z&quot; ****,**
 
-**"last\_login\_ip": "127.0.0.1",**
+**&quot;last\_login\_ip&quot;**** : ****&quot;127.0.0.1&quot; ****,**
 
-**"is\_active": true,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"created\_at": "30 Jun, 2021",**
+**&quot;created\_at&quot;**** : ****&quot;30 Jun, 2021&quot; ****,**
 
-**"updated\_at": "2021-07-09T13:52:04.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-07-09T13:52:04.000000Z&quot; ****,**
 
-**"role": {**
+**&quot;role&quot;**** : {**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"name": "sub admin",**
+**&quot;name&quot;**** : ****&quot;sub admin&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"deleted\_at": null,**
+**&quot;deleted\_at&quot;**** : **** null ****,**
 
-**"created\_at": "2021-05-31T15:11:11.000000Z",**
+**&quot;created\_at&quot;**** : ****&quot;2021-05-31T15:11:11.000000Z&quot; ****,**
 
-**"updated\_at": "2021-05-31T15:18:13.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-31T15:18:13.000000Z&quot; ****,**
 
-**"pivot": {**
+**&quot;pivot&quot;**** : {**
 
-**"user\_id": 24,**
+**&quot;user\_id&quot;**** : **** 24 ****,**
 
-**"role\_id": 2**
+**&quot;role\_id&quot;**** : **** 2**
 
 **}**
 
 **},**
 
-**"permissions": \[**
+**&quot;permissions&quot;**** : [**
 
 **{**
 
-**"id": 26,**
+**&quot;id&quot;**** : **** 26 ****,**
 
-**"name": "read product",**
+**&quot;name&quot;**** : ****&quot;read product&quot; ****,**
 
-**"slug": "read-product",**
+**&quot;slug&quot;**** : ****&quot;read-product&quot; ****,**
 
-**"model": "product",**
+**&quot;model&quot;**** : ****&quot;product&quot; ****,**
 
-**"description": "Can read product",**
+**&quot;description&quot;**** : ****&quot;Can read product&quot; ****,**
 
-**"content": {**
+**&quot;content&quot;**** : {**
 
-**"name": "Products",**
+**&quot;name&quot;**** : ****&quot;Products&quot; ****,**
 
-**"type": "View"**
+**&quot;type&quot;**** : ****&quot;View&quot;**
 
 **},**
 
-**"active": true,**
+**&quot;active&quot;**** : **** true ****,**
 
-**"created\_at": "2021-06-03T08:32:50.000000Z",**
+**&quot;created\_at&quot;**** : ****&quot;2021-06-03T08:32:50.000000Z&quot; ****,**
 
-**"updated\_at": "2021-06-21T12:33:27.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot; ****,**
 
-**"pivot": {**
+**&quot;pivot&quot;**** : {**
 
-**"role\_id": 2,**
+**&quot;role\_id&quot;**** : **** 2 ****,**
 
-**"permission\_id": 26**
-
-**}**
+**&quot;permission\_id&quot;**** : **** 26**
 
 **}**
 
-**\],**
+**}**
 
-**"last\_login\_at\_diff\_for\_human": "2 weeks ago"**
+**],**
+
+**&quot;last\_login\_at\_diff\_for\_human&quot;**** : ****&quot;2 weeks ago&quot;**
 
 **}**
 
@@ -387,23 +372,19 @@ This API used for login into the system
 
 ##### **Forget Password**
 
-**GET api/forget-password**
+**GET**  **api/forget-password**
 
 This API is used to reset user password
 
 **Request Parameter**
 
-  -------------------------------------------------------------
-  **Parameter**   **Validation**            **Description**
-  --------------- ------------------------- -------------------
-  emali           Required |                Email of the user
-                                            
-                  Should be a valid email   
-  -------------------------------------------------------------
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| emali | Required |Should be a valid email | Email of the user |
 
 ##### **Company**
 
-**GET api/admin/company**
+**GET**  **api/admin/company**
 
 This API is used to fetch the lists of companies
 
@@ -411,190 +392,189 @@ This API is used to fetch the lists of companies
 
 **{**
 
-**"data": \[**
+**&quot;data&quot;**** : [**
 
 **{**
 
-**"id": 1,**
+**&quot;id&quot;**** : **** 1 ****,**
 
-**"name": "Steel River",**
+**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
 
-**"description": "description",**
+**&quot;description&quot;**** : ****&quot;description&quot; ****,**
 
-**"is\_active": true,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"created\_at": "02/25/2021",**
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
 
-**"updated\_at": "2021-04-23T09:11:28.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot; ****,**
 
-**"channels": \[**
+**&quot;channels&quot;**** : [**
 
 **{**
 
-**"id": 1,**
+**&quot;id&quot;**** : **** 1 ****,**
 
-**"company\_id": 1,**
+**&quot;company\_id&quot;**** : **** 1 ****,**
 
-**"name": "SR Fulfil",**
+**&quot;name&quot;**** : ****&quot;SR Fulfil&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"credential": {**
+**&quot;credential&quot;**** : {**
 
-**"url": "https://365-holdings-sandbox.fulfil.io/api/v2/model/",**
+**&quot;url&quot;**** : ****&quot;https://365-holdings-sandbox.fulfil.io/api/v2/model/&quot; ****,**
 
-**"x\_api\_key": "a026a119032241aba46e757bed20814c",**
+**&quot;x\_api\_key&quot;**** : ****&quot;a026a119032241aba46e757bed20814c&quot; ****,**
 
-**"product\_url":
-"https://365-holdings-sandbox.fulfil.io/client/\#/model/product.product/"**
+**&quot;product\_url&quot;**** : ****&quot;https://365-holdings-sandbox.fulfil.io/client/#/model/product.product/&quot;**
 
 **},**
 
-**"type": "fulfil",**
+**&quot;type&quot;**** : ****&quot;fulfil&quot; ****,**
 
-**"is\_active": true,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"created\_at": "02/25/2021",**
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
 
-**"updated\_at": "2021-05-24T11:24:02.000000Z"**
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:24:02.000000Z&quot;**
 
 **}**
 
-**\]**
+**]**
 
 **},**
 
 **{**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"name": "Nicki’s Diapers",**
+**&quot;name&quot;**** : ****&quot;Nicki&#39;s Diapers&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"is\_active": true,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"created\_at": "02/25/2021",**
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
 
-**"updated\_at": "2021-04-05T12:35:15.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-04-05T12:35:15.000000Z&quot; ****,**
 
-**"channels": \[**
+**&quot;channels&quot;**** : [**
 
 **{**
 
-**"id": 4,**
+**&quot;id&quot;**** : **** 4 ****,**
 
-**"company\_id": 2,**
+**&quot;company\_id&quot;**** : **** 2 ****,**
 
-**"name": "ND Fulfil",**
+**&quot;name&quot;**** : ****&quot;ND Fulfil&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"credential": null,**
+**&quot;credential&quot;**** : **** null ****,**
 
-**"type": null,**
+**&quot;type&quot;**** : **** null ****,**
 
-**"is\_active": true,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"created\_at": "02/25/2021",**
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
 
-**"updated\_at": "2021-02-25T08:54:45.000000Z"**
-
-**}**
-
-**\]**
+**&quot;updated\_at&quot;**** : ****&quot;2021-02-25T08:54:45.000000Z&quot;**
 
 **}**
 
-**\]**
+**]**
 
 **}**
 
-**POST api/admin/company**
+**]**
+
+**}**
+
+**POST**  **api/admin/company**
 
 This API is used to create new company
 
 **Request Parameter**
 
-  **Parameter**   **Validation**   **Description**
-  --------------- ---------------- ---------------------
-  name            Required         Name of the company
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the company |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"data": {**
+**&quot;data&quot;**** : {**
 
-**"name": "New Company",**
+**&quot;name&quot;**** : ****&quot;New Company&quot; ****,**
 
-**"updated\_at": "2021-07-23T14:57:53.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-07-23T14:57:53.000000Z&quot; ****,**
 
-**"created\_at": "07/23/2021",**
+**&quot;created\_at&quot;**** : ****&quot;07/23/2021&quot; ****,**
 
-**"id": 9**
-
-**}**
+**&quot;id&quot;**** : **** 9**
 
 **}**
 
-**PUT api/admin/company/{id}**
+**}**
+
+**PUT**  **api/admin/company/{id}**
 
 This API is used to update existing company
 
 **Request Parameter**
 
-  **Parameter**   **Validation**   **Description**
-  --------------- ---------------- ---------------------
-  name            Required         Name of the company
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the company |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"data": {**
+**&quot;data&quot;**** : {**
 
-**"name": "New Company",**
+**&quot;name&quot;**** : ****&quot;New Company&quot; ****,**
 
-**"updated\_at": "2021-07-23T14:57:53.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-07-23T14:57:53.000000Z&quot; ****,**
 
-**"created\_at": "07/23/2021",**
+**&quot;created\_at&quot;**** : ****&quot;07/23/2021&quot; ****,**
 
-**"id": 9**
-
-**}**
+**&quot;id&quot;**** : **** 9**
 
 **}**
 
-**PUT api/admin/company/status/update/{id}**
+**}**
+
+**PUT**  **api/admin/company/status/update/{id}**
 
 This API is used to update status of company (active or inactive)
 
 **Request Parameter**
 
-  **Parameter**   **Validation**   **Description**
-  --------------- ---------------- ----------------------------------------
-  is\_active      Optional         Status of the channel (default active)
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| is\_active | Optional | Status of the channel (default active) |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"data": {**
+**&quot;data&quot;**** : {**
 
-**"name": "New Company",**
+**&quot;name&quot;**** : ****&quot;New Company&quot; ****,**
 
-**"updated\_at": "2021-07-23T14:57:53.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-07-23T14:57:53.000000Z&quot; ****,**
 
-**"created\_at": "07/23/2021",**
+**&quot;created\_at&quot;**** : ****&quot;07/23/2021&quot; ****,**
 
-**"id": 9**
+**&quot;id&quot;**** : **** 9**
 
 **}**
 
@@ -602,7 +582,7 @@ This API is used to update status of company (active or inactive)
 
 ##### **Channel**
 
-**GET api/admin/channel**
+**GET**  **api/admin/channel**
 
 This API is used to fetch the lists of channels
 
@@ -610,195 +590,193 @@ This API is used to fetch the lists of channels
 
 **{**
 
-**"data": \[**
+**&quot;data&quot;**** : [**
 
 **{**
 
-**"id": 1,**
+**&quot;id&quot;**** : **** 1 ****,**
 
-**"company\_id": 1,**
+**&quot;company\_id&quot;**** : **** 1 ****,**
 
-**"name": "SR Fulfil",**
+**&quot;name&quot;**** : ****&quot;SR Fulfil&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"credential": {**
+**&quot;credential&quot;**** : {**
 
-**"url": "https://365-holdings-sandbox.fulfil.io/api/v2/model/",**
+**&quot;url&quot;**** : ****&quot;https://365-holdings-sandbox.fulfil.io/api/v2/model/&quot; ****,**
 
-**"x\_api\_key": "a026a119032241aba46e757bed20814c",**
+**&quot;x\_api\_key&quot;**** : ****&quot;a026a119032241aba46e757bed20814c&quot; ****,**
 
-**"product\_url":
-"https://365-holdings-sandbox.fulfil.io/client/\#/model/product.product/"**
-
-**},**
-
-**"type": "fulfil",**
-
-**"is\_active": true,**
-
-**"created\_at": "02/25/2021",**
-
-**"updated\_at": "2021-05-24T11:24:02.000000Z",**
-
-**"company": {**
-
-**"id": 1,**
-
-**"name": "Steel River",**
-
-**"description": "description",**
-
-**"is\_active": true,**
-
-**"created\_at": "02/25/2021",**
-
-**"updated\_at": "2021-04-23T09:11:28.000000Z"**
+**&quot;product\_url&quot;**** : ****&quot;https://365-holdings-sandbox.fulfil.io/client/#/model/product.product/&quot;**
 
 **},**
 
-**"instance\_options": \[\]**
+**&quot;type&quot;**** : ****&quot;fulfil&quot; ****,**
+
+**&quot;is\_active&quot;**** : **** true ****,**
+
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
+
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:24:02.000000Z&quot; ****,**
+
+**&quot;company&quot;**** : {**
+
+**&quot;id&quot;**** : **** 1 ****,**
+
+**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
+
+**&quot;description&quot;**** : ****&quot;description&quot; ****,**
+
+**&quot;is\_active&quot;**** : **** true ****,**
+
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
+
+**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot;**
+
+**},**
+
+**&quot;instance\_options&quot;**** : []**
 
 **},**
 
 **{**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"company\_id": 1,**
+**&quot;company\_id&quot;**** : **** 1 ****,**
 
-**"name": "SR Sticky.io/LL",**
+**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"credential": {**
+**&quot;credential&quot;**** : {**
 
-**"url": "https://sos.limelightcrm.com/api/",**
+**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
 
-**"username": "api-sos-live",**
+**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
 
-**"password": "s7SVBrnswPAmsV",**
+**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
 
-**"product\_url":
-"https://sos.limelightcrm.com/admin/products/products.php?product\_id="**
-
-**},**
-
-**"type": "sticky",**
-
-**"is\_active": true,**
-
-**"created\_at": "02/25/2021",**
-
-**"updated\_at": "2021-05-24T11:25:08.000000Z",**
-
-**"company": {**
-
-**"id": 1,**
-
-**"name": "Steel River",**
-
-**"description": "description",**
-
-**"is\_active": true,**
-
-**"created\_at": "02/25/2021",**
-
-**"updated\_at": "2021-04-23T09:11:28.000000Z"**
+**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
 
 **},**
 
-**"instance\_options": \[\]**
+**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
+
+**&quot;is\_active&quot;**** : **** true ****,**
+
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
+
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot; ****,**
+
+**&quot;company&quot;**** : {**
+
+**&quot;id&quot;**** : **** 1 ****,**
+
+**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
+
+**&quot;description&quot;**** : ****&quot;description&quot; ****,**
+
+**&quot;is\_active&quot;**** : **** true ****,**
+
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
+
+**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot;**
+
+**},**
+
+**&quot;instance\_options&quot;**** : []**
 
 **}**
 
-**\]**
+**]**
 
 **}**
 
-**POST api/admin/channel**
+**POST**  **api/admin/channel**
 
 This API is used to create new channel
 
 **Request Parameter**
 
-  **Parameter**       **Validation**                                               **Description**
-  ------------------- ------------------------------------------------------------ --------------------------------------------------------------
-  name                Required                                                     Name of the channel
-  type                Required | value should be between fulfil, sticky, shopify   Type of the channel
-  instance\_options   Optional                                                     Instances options for the channel, like API url, API key etc
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the channel |
+| type | Required | value should be between fulfil, sticky, shopify | Type of the channel |
+| instance\_options | Optional | Instances options for the channel, like API url, API key etc |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"data": {**
+**&quot;data&quot;**** : {**
 
-**"name": "New Channel",**
+**&quot;name&quot;**** : ****&quot;New Channel&quot; ****,**
 
-**"type": "sticky",**
+**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
 
-**"company\_id": "1",**
+**&quot;company\_id&quot;**** : ****&quot;1&quot; ****,**
 
-**"credential": null,**
+**&quot;credential&quot;**** : **** null ****,**
 
-**"updated\_at": "2021-07-26T07:22:17.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-07-26T07:22:17.000000Z&quot; ****,**
 
-**"created\_at": "07/26/2021",**
+**&quot;created\_at&quot;**** : ****&quot;07/26/2021&quot; ****,**
 
-**"id": 29**
-
-**}**
+**&quot;id&quot;**** : **** 29**
 
 **}**
 
-**PUT api/admin/channel/{id}**
+**}**
+
+**PUT**  **api/admin/channel/{id}**
 
 This API is used to update existing channel
 
 **Request Parameter**
 
-  **Parameter**       **Validation**                                               **Description**
-  ------------------- ------------------------------------------------------------ --------------------------------------------------------------
-  name                Required                                                     Name of the channel
-  type                Required | value should be between fulfil, sticky, shopify   Type of the channel
-  instance\_options   Optional                                                     Instances options for the channel, like API url, API key etc
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the channel |
+| type | Required | value should be between fulfil, sticky, shopify | Type of the channel |
+| instance\_options | Optional | Instances options for the channel, like API url, API key etc |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"data": true**
+**&quot;data&quot;**** : **** true**
 
 **}**
 
-**PUT api/admin/channel/status/update/{id}**
+**PUT**  **api/admin/channel/status/update/{id}**
 
 This API is used to update status of channel (active or inactive)
 
 **Request Parameter**
 
-  **Parameter**   **Validation**   **Description**
-  --------------- ---------------- ----------------------------------------
-  is\_active      Optional         Status of the channel (default active)
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| is\_active | Optional | Status of the channel (default active) |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"data": true**
+**&quot;data&quot;**** : **** true**
 
 **}**
 
 ##### **User**
 
-**GET api/admin/user**
+**GET**  **api/admin/user**
 
 This API is used to fetch the lists of users
 
@@ -806,183 +784,172 @@ This API is used to fetch the lists of users
 
 **{**
 
-**"data": \[**
+**&quot;data&quot;**** : [**
 
 **{**
 
-**"id": 24,**
+**&quot;id&quot;**** : **** 24 ****,**
 
-**"name": "Sd",**
+**&quot;name&quot;**** : ****&quot;Sd&quot; ****,**
 
-**"email": "sudipta.jana@codeclouds.in",**
+**&quot;email&quot;**** : ****&quot;sudipta.jana@codeclouds.in&quot; ****,**
 
-**"email\_verified\_at": null,**
+**&quot;email\_verified\_at&quot;**** : **** null ****,**
 
-**"deleted\_at": null,**
+**&quot;deleted\_at&quot;**** : **** null ****,**
 
-**"last\_login\_at": "2021-07-23T14:51:50.000000Z",**
+**&quot;last\_login\_at&quot;**** : ****&quot;2021-07-23T14:51:50.000000Z&quot; ****,**
 
-**"last\_login\_ip": "127.0.0.1",**
+**&quot;last\_login\_ip&quot;**** : ****&quot;127.0.0.1&quot; ****,**
 
-**"is\_active": true,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"created\_at": "30 Jun, 2021",**
+**&quot;created\_at&quot;**** : ****&quot;30 Jun, 2021&quot; ****,**
 
-**"updated\_at": "2021-07-23T14:51:50.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-07-23T14:51:50.000000Z&quot; ****,**
 
-**"role": {**
+**&quot;role&quot;**** : {**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"name": "sub admin",**
+**&quot;name&quot;**** : ****&quot;sub admin&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"deleted\_at": null,**
+**&quot;deleted\_at&quot;**** : **** null ****,**
 
-**"created\_at": "2021-05-31T15:11:11.000000Z",**
+**&quot;created\_at&quot;**** : ****&quot;2021-05-31T15:11:11.000000Z&quot; ****,**
 
-**"updated\_at": "2021-05-31T15:18:13.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-31T15:18:13.000000Z&quot; ****,**
 
-**"pivot": {**
+**&quot;pivot&quot;**** : {**
 
-**"user\_id": 24,**
+**&quot;user\_id&quot;**** : **** 24 ****,**
 
-**"role\_id": 2**
+**&quot;role\_id&quot;**** : **** 2**
 
 **}**
 
 **},**
 
-**"permissions": \[**
+**&quot;permissions&quot;**** : [**
 
 **{**
 
-**"id": 26,**
+**&quot;id&quot;**** : **** 26 ****,**
 
-**"name": "read product",**
+**&quot;name&quot;**** : ****&quot;read product&quot; ****,**
 
-**"slug": "read-product",**
+**&quot;slug&quot;**** : ****&quot;read-product&quot; ****,**
 
-**"model": "product",**
+**&quot;model&quot;**** : ****&quot;product&quot; ****,**
 
-**"description": "Can read product",**
+**&quot;description&quot;**** : ****&quot;Can read product&quot; ****,**
 
-**"content": {**
+**&quot;content&quot;**** : {**
 
-**"name": "Products",**
+**&quot;name&quot;**** : ****&quot;Products&quot; ****,**
 
-**"type": "View"**
+**&quot;type&quot;**** : ****&quot;View&quot;**
 
 **},**
 
-**"active": true,**
+**&quot;active&quot;**** : **** true ****,**
 
-**"created\_at": "2021-06-03T08:32:50.000000Z",**
+**&quot;created\_at&quot;**** : ****&quot;2021-06-03T08:32:50.000000Z&quot; ****,**
 
-**"updated\_at": "2021-06-21T12:33:27.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot; ****,**
 
-**"pivot": {**
+**&quot;pivot&quot;**** : {**
 
-**"role\_id": 2,**
+**&quot;role\_id&quot;**** : **** 2 ****,**
 
-**"permission\_id": 26**
-
-**}**
+**&quot;permission\_id&quot;**** : **** 26**
 
 **}**
 
-**\],**
+**}**
 
-**"last\_login\_at\_diff\_for\_human": "2 days ago"**
+**],**
+
+**&quot;last\_login\_at\_diff\_for\_human&quot;**** : ****&quot;2 days ago&quot;**
 
 **}**
 
-**\]**
+**]**
 
 **}**
 
-**PUT api/admin/user/{id}**
+**PUT**  **api/admin/user/{id}**
 
 This API is used to update existing user
 
 **Request Parameter**
 
-  ----------------------------------------------------------------------------------------
-  **Parameter**   **Validation**                                       **Description**
-  --------------- ---------------------------------------------------- -------------------
-  name            Required                                             Name of the user
-
-  email           Required |                                           Email of the user
-                                                                       
-                  Should be a valid email | Should be a unique email   
-
-  role\_id        Required                                             Role of the user
-  ----------------------------------------------------------------------------------------
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the user |
+| email | Required |Should be a valid email | Should be a unique email | Email of the user |
+| role\_id | Required | Role of the user |
 
 **Response**
 
 **{**
 
-**"success": true,**
+**&quot;success&quot;**** : **** true ****,**
 
-**"message": "User updated"**
+**&quot;message&quot;**** : ****&quot;User updated&quot;**
 
 **}**
 
-**PUT api/admin/user/status/update/{id}**
+**PUT**  **api/admin/user/status/update/{id}**
 
 This API is used to update status of user (active or inactive)
 
 **Request Parameter**
 
-  **Parameter**   **Validation**   **Description**
-  --------------- ---------------- -------------------------------------
-  is\_active      Optional         Status of the user (default active)
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| is\_active | Optional | Status of the user (default active) |
 
 **Response**
 
 **{**
 
-**"success": true,**
+**&quot;success&quot;**** : **** true ****,**
 
-**"message": "Status updated"**
+**&quot;message&quot;**** : ****&quot;Status updated&quot;**
 
 **}**
 
-**GET api/admin/auth-user**
+**GET**  **api/admin/auth-user**
 
 This API is used to fetch the authorized user
 
-**PUT api/admin/profile/update**
+**PUT**  **api/admin/profile/update**
 
-This API is used to update authorized user’s data
+This API is used to update authorized user&#39;s data
 
 **Request Parameter**
 
-  ----------------------------------------------------------------------------------------
-  **Parameter**   **Validation**                                       **Description**
-  --------------- ---------------------------------------------------- -------------------
-  name            Required                                             Name of the user
-
-  email           Required |                                           Email of the user
-                                                                       
-                  Should be a valid email | Should be a unique email   
-  ----------------------------------------------------------------------------------------
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the user |
+| email | Required |Should be a valid email | Should be a unique email | Email of the user |
 
 **Response**
 
 **{**
 
-**"success": true,**
+**&quot;success&quot;**** : **** true ****,**
 
-**"message": "Profileh updated"**
+**&quot;message&quot;**** : ****&quot;Profileh updated&quot;**
 
 **}**
 
 ##### **Role**
 
-**GET api/admin/role**
+**GET**  **api/admin/role**
 
 This API is used to fetch the lists of roles
 
@@ -990,171 +957,171 @@ This API is used to fetch the lists of roles
 
 **{**
 
-**"data": \[**
+**&quot;data&quot;**** : [**
 
 **{**
 
-**"id": 1,**
+**&quot;id&quot;**** : **** 1 ****,**
 
-**"name": "admin",**
+**&quot;name&quot;**** : ****&quot;admin&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"deleted\_at": null,**
+**&quot;deleted\_at&quot;**** : **** null ****,**
 
-**"created\_at": "25 Feb, 2021",**
+**&quot;created\_at&quot;**** : ****&quot;25 Feb, 2021&quot; ****,**
 
-**"updated\_at": "2021-02-25T09:02:21.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-02-25T09:02:21.000000Z&quot; ****,**
 
-**"total\_users\_count": 2,**
+**&quot;total\_users\_count&quot;**** : **** 2 ****,**
 
-**"permissions": \[**
+**&quot;permissions&quot;**** : [**
 
 **{**
 
-**"id": 4,**
+**&quot;id&quot;**** : **** 4 ****,**
 
-**"name": "delete user",**
+**&quot;name&quot;**** : ****&quot;delete user&quot; ****,**
 
-**"slug": "delete-user",**
+**&quot;slug&quot;**** : ****&quot;delete-user&quot; ****,**
 
-**"model": "user",**
+**&quot;model&quot;**** : ****&quot;user&quot; ****,**
 
-**"description": "Can delete user",**
+**&quot;description&quot;**** : ****&quot;Can delete user&quot; ****,**
 
-**"content": {**
+**&quot;content&quot;**** : {**
 
-**"name": "Users",**
+**&quot;name&quot;**** : ****&quot;Users&quot; ****,**
 
-**"type": "Delete"**
+**&quot;type&quot;**** : ****&quot;Delete&quot;**
 
 **},**
 
-**"active": false,**
+**&quot;active&quot;**** : **** false ****,**
 
-**"created\_at": "2021-06-03T08:32:50.000000Z",**
+**&quot;created\_at&quot;**** : ****&quot;2021-06-03T08:32:50.000000Z&quot; ****,**
 
-**"updated\_at": "2021-06-21T12:33:27.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot; ****,**
 
-**"pivot": {**
+**&quot;pivot&quot;**** : {**
 
-**"role\_id": 1,**
+**&quot;role\_id&quot;**** : **** 1 ****,**
 
-**"permission\_id": 4**
-
-**}**
+**&quot;permission\_id&quot;**** : **** 4**
 
 **}**
 
-**\]**
+**}**
+
+**]**
 
 **},**
 
 **{**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"name": "sub admin",**
+**&quot;name&quot;**** : ****&quot;sub admin&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"deleted\_at": null,**
+**&quot;deleted\_at&quot;**** : **** null ****,**
 
-**"created\_at": "31 May, 2021",**
+**&quot;created\_at&quot;**** : ****&quot;31 May, 2021&quot; ****,**
 
-**"updated\_at": "2021-05-31T15:18:13.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-31T15:18:13.000000Z&quot; ****,**
 
-**"total\_users\_count": 3,**
+**&quot;total\_users\_count&quot;**** : **** 3 ****,**
 
-**"permissions": \[**
+**&quot;permissions&quot;**** : [**
 
 **{**
 
-**"id": 26,**
+**&quot;id&quot;**** : **** 26 ****,**
 
-**"name": "read product",**
+**&quot;name&quot;**** : ****&quot;read product&quot; ****,**
 
-**"slug": "read-product",**
+**&quot;slug&quot;**** : ****&quot;read-product&quot; ****,**
 
-**"model": "product",**
+**&quot;model&quot;**** : ****&quot;product&quot; ****,**
 
-**"description": "Can read product",**
+**&quot;description&quot;**** : ****&quot;Can read product&quot; ****,**
 
-**"content": {**
+**&quot;content&quot;**** : {**
 
-**"name": "Products",**
+**&quot;name&quot;**** : ****&quot;Products&quot; ****,**
 
-**"type": "View"**
+**&quot;type&quot;**** : ****&quot;View&quot;**
 
 **},**
 
-**"active": true,**
+**&quot;active&quot;**** : **** true ****,**
 
-**"created\_at": "2021-06-03T08:32:50.000000Z",**
+**&quot;created\_at&quot;**** : ****&quot;2021-06-03T08:32:50.000000Z&quot; ****,**
 
-**"updated\_at": "2021-06-21T12:33:27.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot; ****,**
 
-**"pivot": {**
+**&quot;pivot&quot;**** : {**
 
-**"role\_id": 2,**
+**&quot;role\_id&quot;**** : **** 2 ****,**
 
-**"permission\_id": 26**
-
-**}**
+**&quot;permission\_id&quot;**** : **** 26**
 
 **}**
 
-**\]**
+**}**
+
+**]**
 
 **}**
 
-**\]**
+**]**
 
 **}**
 
-**POST api/admin/role**
+**POST**  **api/admin/role**
 
 This API is used to create new role
 
 **Request Parameter**
 
-  **Parameter**   **Validation**   **Description**
-  --------------- ---------------- ------------------
-  name            Required         Name of the role
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the role |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"message": “Role is created”**
+**&quot;message&quot;**** : ****&quot;Role is created&quot;**
 
 **}**
 
-**PUT api/admin/role/{id}**
+**PUT**  **api/admin/role/{id}**
 
 This API is used to update existing role
 
 **Request Parameter**
 
-  **Parameter**   **Validation**   **Description**
-  --------------- ---------------- ------------------
-  name            Required         Name of the role
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| name | Required | Name of the role |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"message": “Permission update”**
+**&quot;message&quot;**** : ****&quot;Permission update&quot;**
 
 **}**
 
 ##### **Permission**
 
-**GET api/admin/permission**
+**GET**  **api/admin/permission**
 
 This API is used to fetch the lists of permissions
 
@@ -1162,92 +1129,92 @@ This API is used to fetch the lists of permissions
 
 **{**
 
-**"data": \[**
+**&quot;data&quot;**** : [**
 
 **{**
 
-**"id": 1,**
+**&quot;id&quot;**** : **** 1 ****,**
 
-**"name": "create user",**
+**&quot;name&quot;**** : ****&quot;create user&quot; ****,**
 
-**"slug": "create-user",**
+**&quot;slug&quot;**** : ****&quot;create-user&quot; ****,**
 
-**"model": "user",**
+**&quot;model&quot;**** : ****&quot;user&quot; ****,**
 
-**"description": "Can create user",**
+**&quot;description&quot;**** : ****&quot;Can create user&quot; ****,**
 
-**"content": {**
+**&quot;content&quot;**** : {**
 
-**"name": "Users",**
+**&quot;name&quot;**** : ****&quot;Users&quot; ****,**
 
-**"type": "Create"**
+**&quot;type&quot;**** : ****&quot;Create&quot;**
 
 **},**
 
-**"active": true,**
+**&quot;active&quot;**** : **** true ****,**
 
-**"created\_at": "03 Jun, 2021",**
+**&quot;created\_at&quot;**** : ****&quot;03 Jun, 2021&quot; ****,**
 
-**"updated\_at": "2021-06-21T12:33:27.000000Z"**
+**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot;**
 
 **},**
 
 **{**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"name": "read user",**
+**&quot;name&quot;**** : ****&quot;read user&quot; ****,**
 
-**"slug": "read-user",**
+**&quot;slug&quot;**** : ****&quot;read-user&quot; ****,**
 
-**"model": "user",**
+**&quot;model&quot;**** : ****&quot;user&quot; ****,**
 
-**"description": "Can read user",**
+**&quot;description&quot;**** : ****&quot;Can read user&quot; ****,**
 
-**"content": {**
+**&quot;content&quot;**** : {**
 
-**"name": "Users",**
+**&quot;name&quot;**** : ****&quot;Users&quot; ****,**
 
-**"type": "View"**
+**&quot;type&quot;**** : ****&quot;View&quot;**
 
 **},**
 
-**"active": true,**
+**&quot;active&quot;**** : **** true ****,**
 
-**"created\_at": "03 Jun, 2021",**
+**&quot;created\_at&quot;**** : ****&quot;03 Jun, 2021&quot; ****,**
 
-**"updated\_at": "2021-06-21T12:33:27.000000Z"**
-
-**}**
-
-**\]**
+**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot;**
 
 **}**
 
-**PUT api/admin/role/permission/update/{id}**
+**]**
+
+**}**
+
+**PUT**  **api/admin/role/permission/update/{id}**
 
 This API is used to update permissions of a particular role
 
 **Request Parameter**
 
-  **Parameter**    **Validation**   **Description**
-  ---------------- ---------------- ---------------------------
-  role\_id         Required         Role id of the user
-  permission\_id   Required         Permission id of the user
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| role\_id | Required | Role id of the user |
+| permission\_id | Required | Permission id of the user |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"message": “Permission update”**
+**&quot;message&quot;**** : ****&quot;Permission update&quot;**
 
 **}**
 
 ##### **Product**
 
-**GET api/admin/product**
+**GET**  **api/admin/product**
 
 This API is used to fetch the lists of products
 
@@ -1255,741 +1222,724 @@ This API is used to fetch the lists of products
 
 **{**
 
-**"data": \[**
+**&quot;data&quot;**** : [**
 
 **{**
 
-**"id": 347,**
+**&quot;id&quot;**** : **** 347 ****,**
 
-**"company\_id": 1,**
+**&quot;company\_id&quot;**** : **** 1 ****,**
 
-**"channel\_id": 2,**
+**&quot;channel\_id&quot;**** : **** 2 ****,**
 
-**"channels": \[**
+**&quot;channels&quot;**** : [**
 
 **{**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"company\_id": 1,**
+**&quot;company\_id&quot;**** : **** 1 ****,**
 
-**"name": "SR Sticky.io/LL",**
+**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"credential": {**
+**&quot;credential&quot;**** : {**
 
-**"url": "https://sos.limelightcrm.com/api/",**
+**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
 
-**"username": "api-sos-live",**
+**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
 
-**"password": "s7SVBrnswPAmsV",**
+**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
 
-**"product\_url":
-"https://sos.limelightcrm.com/admin/products/products.php?product\_id="**
+**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
 
 **},**
 
-**"type": "sticky",**
+**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
 
-**"is\_active": true,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"created\_at": "02/25/2021",**
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
 
-**"updated\_at": "2021-05-24T11:25:08.000000Z"**
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot;**
 
 **}**
 
-**\],**
+**],**
 
-**"title": "OTO: Product fulfil media test 0321",**
+**&quot;title&quot;**** : ****&quot;OTO: Product fulfil media test 0321&quot; ****,**
 
-**"price": 10,**
+**&quot;price&quot;**** : **** 10 ****,**
 
-**"cost": 10,**
+**&quot;cost&quot;**** : **** 10 ****,**
 
-**"cost\_price\_method": "average",**
+**&quot;cost\_price\_method&quot;**** : ****&quot;average&quot; ****,**
 
-**"description": "kjdasdbmn",**
+**&quot;description&quot;**** : ****&quot;kjdasdbmn&quot; ****,**
 
-**"status": 3,**
+**&quot;status&quot;**** : **** 3 ****,**
 
-**"is\_publish": true,**
+**&quot;is\_publish&quot;**** : **** true ****,**
 
-**"sku": "DEVTEST3379",**
+**&quot;sku&quot;**** : ****&quot;DEVTEST3379&quot; ****,**
 
-**"quantity": 10,**
+**&quot;quantity&quot;**** : **** 10 ****,**
 
-**"template": null,**
+**&quot;template&quot;**** : **** null ****,**
 
-**"sale\_uom": null,**
+**&quot;sale\_uom&quot;**** : **** null ****,**
 
-**"purchasable": true,**
+**&quot;purchasable&quot;**** : **** true ****,**
 
-**"scan\_required": true,**
+**&quot;scan\_required&quot;**** : **** true ****,**
 
-**"salable": true,**
+**&quot;salable&quot;**** : **** true ****,**
 
-**"sticky\_category\_id": 13,**
+**&quot;sticky\_category\_id&quot;**** : **** 13 ****,**
 
-**"is\_shippable": true,**
+**&quot;is\_shippable&quot;**** : **** true ****,**
 
-**"shipping\_digital\_url": null,**
+**&quot;shipping\_digital\_url&quot;**** : **** null ****,**
 
-**"type": null,**
+**&quot;type&quot;**** : **** null ****,**
 
-**"vendor": null,**
+**&quot;vendor&quot;**** : **** null ****,**
 
-**"tags": \[\],**
+**&quot;tags&quot;**** : [],**
 
-**"is\_digital": false,**
+**&quot;is\_digital&quot;**** : **** false ****,**
 
-**"weight": null,**
+**&quot;weight&quot;**** : **** null ****,**
 
-**"weight\_uom": null,**
+**&quot;weight\_uom&quot;**** : **** null ****,**
 
-**"width": null,**
+**&quot;width&quot;**** : **** null ****,**
 
-**"height": null,**
+**&quot;height&quot;**** : **** null ****,**
 
-**"length": null,**
+**&quot;length&quot;**** : **** null ****,**
 
-**"dimensions\_uom": null,**
+**&quot;dimensions\_uom&quot;**** : **** null ****,**
 
-**"flavor": null,**
+**&quot;flavor&quot;**** : **** null ****,**
 
-**"supplement\_type": null,**
+**&quot;supplement\_type&quot;**** : **** null ****,**
 
-**"pills\_per\_bottle": null,**
+**&quot;pills\_per\_bottle&quot;**** : **** null ****,**
 
-**"print": null,**
+**&quot;print&quot;**** : **** null ****,**
 
-**"suppliers": \[\],**
+**&quot;suppliers&quot;**** : [],**
 
-**"hs\_code": null,**
+**&quot;hs\_code&quot;**** : **** null ****,**
 
-**"vendor\_lead\_time": null,**
+**&quot;vendor\_lead\_time&quot;**** : **** null ****,**
 
-**"country\_id": null,**
+**&quot;country\_id&quot;**** : **** null ****,**
 
-**"handle": null,**
+**&quot;handle&quot;**** : **** null ****,**
 
-**"gs1": null,**
+**&quot;gs1&quot;**** : **** null ****,**
 
-**"has\_variants": false,**
+**&quot;has\_variants&quot;**** : **** false ****,**
 
-**"variant\_options": \[\],**
+**&quot;variant\_options&quot;**** : [],**
 
-**"variant\_option\_preview": \[\],**
+**&quot;variant\_option\_preview&quot;**** : [],**
 
-**"instance\_response": {**
+**&quot;instance\_response&quot;**** : {**
 
-**"status": "pending",**
+**&quot;status&quot;**** : ****&quot;pending&quot; ****,**
 
-**"data": null,**
+**&quot;data&quot;**** : **** null ****,**
 
-**"payload": {**
+**&quot;payload&quot;**** : {**
 
-**"product\_name": "OTO: Product fulfil media test 0321",**
+**&quot;product\_name&quot;**** : ****&quot;OTO: Product fulfil media test 0321&quot; ****,**
 
-**"product\_sku": "DEVTEST3379",**
+**&quot;product\_sku&quot;**** : ****&quot;DEVTEST3379&quot; ****,**
 
-**"product\_price": "10",**
+**&quot;product\_price&quot;**** : ****&quot;10&quot; ****,**
 
-**"product\_description": "kjdasdbmn",**
+**&quot;product\_description&quot;**** : ****&quot;kjdasdbmn&quot; ****,**
 
-**"product\_max\_quantity": "10",**
+**&quot;product\_max\_quantity&quot;**** : ****&quot;10&quot; ****,**
 
-**"shippable": true,**
+**&quot;shippable&quot;**** : **** true ****,**
 
-**"shipping\_weight": null,**
+**&quot;shipping\_weight&quot;**** : **** null ****,**
 
-**"weight\_unit\_id": null,**
+**&quot;weight\_unit\_id&quot;**** : **** null ****,**
 
-**"category\_id": 13,**
+**&quot;category\_id&quot;**** : **** 13 ****,**
 
-**"events": \[**
+**&quot;events&quot;**** : [**
 
-**"Order Refund"**
+**&quot;Order Refund&quot;**
 
-**\]**
+**]**
 
 **}**
 
 **},**
 
-**"update\_response": null,**
+**&quot;update\_response&quot;**** : **** null ****,**
 
-**"created\_at": "07/01/2021",**
+**&quot;created\_at&quot;**** : ****&quot;07/01/2021&quot; ****,**
 
-**"updated\_at": "2021-07-01T14:18:53.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-07-01T14:18:53.000000Z&quot; ****,**
 
-**"channel": {**
+**&quot;channel&quot;**** : {**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"company\_id": 1,**
+**&quot;company\_id&quot;**** : **** 1 ****,**
 
-**"name": "SR Sticky.io/LL",**
+**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"credential": {**
+**&quot;credential&quot;**** : {**
 
-**"url": "https://sos.limelightcrm.com/api/",**
+**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
 
-**"username": "api-sos-live",**
+**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
 
-**"password": "s7SVBrnswPAmsV",**
+**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
 
-**"product\_url":
-"https://sos.limelightcrm.com/admin/products/products.php?product\_id="**
-
-**},**
-
-**"type": "sticky",**
-
-**"is\_active": true,**
-
-**"created\_at": "02/25/2021",**
-
-**"updated\_at": "2021-05-24T11:25:08.000000Z"**
+**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
 
 **},**
 
-**"companies": {**
+**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
 
-**"id": 1,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"name": "Steel River",**
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
 
-**"description": "description",**
-
-**"is\_active": true,**
-
-**"created\_at": "02/25/2021",**
-
-**"updated\_at": "2021-04-23T09:11:28.000000Z"**
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot;**
 
 **},**
 
-**"country": null,**
+**&quot;companies&quot;**** : {**
 
-**"child\_products": null,**
+**&quot;id&quot;**** : **** 1 ****,**
 
-**"instance\_status": "pending",**
+**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
 
-**"instance\_id": null,**
+**&quot;description&quot;**** : ****&quot;description&quot; ****,**
 
-**"instance\_product\_url":
-"https://sos.limelightcrm.com/admin/products/products.php?product\_id="**
+**&quot;is\_active&quot;**** : **** true ****,**
+
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
+
+**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot;**
+
+**},**
+
+**&quot;country&quot;**** : **** null ****,**
+
+**&quot;child\_products&quot;**** : **** null ****,**
+
+**&quot;instance\_status&quot;**** : ****&quot;pending&quot; ****,**
+
+**&quot;instance\_id&quot;**** : **** null ****,**
+
+**&quot;instance\_product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
 
 **},**
 
 **{**
 
-**"id": 346,**
+**&quot;id&quot;**** : **** 346 ****,**
 
-**"company\_id": 1,**
+**&quot;company\_id&quot;**** : **** 1 ****,**
 
-**"channel\_id": 2,**
+**&quot;channel\_id&quot;**** : **** 2 ****,**
 
-**"channels": \[**
+**&quot;channels&quot;**** : [**
 
 **{**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"company\_id": 1,**
+**&quot;company\_id&quot;**** : **** 1 ****,**
 
-**"name": "SR Sticky.io/LL",**
+**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"credential": {**
+**&quot;credential&quot;**** : {**
 
-**"url": "https://sos.limelightcrm.com/api/",**
+**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
 
-**"username": "api-sos-live",**
+**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
 
-**"password": "s7SVBrnswPAmsV",**
+**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
 
-**"product\_url":
-"https://sos.limelightcrm.com/admin/products/products.php?product\_id="**
+**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
 
 **},**
 
-**"type": "sticky",**
+**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
 
-**"is\_active": true,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"created\_at": "02/25/2021",**
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
 
-**"updated\_at": "2021-05-24T11:25:08.000000Z"**
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot;**
 
 **}**
 
-**\],**
+**],**
 
-**"title": "OTO: Product fulfil media test 0321",**
+**&quot;title&quot;**** : ****&quot;OTO: Product fulfil media test 0321&quot; ****,**
 
-**"price": 10,**
+**&quot;price&quot;**** : **** 10 ****,**
 
-**"cost": 10,**
+**&quot;cost&quot;**** : **** 10 ****,**
 
-**"cost\_price\_method": "average",**
+**&quot;cost\_price\_method&quot;**** : ****&quot;average&quot; ****,**
 
-**"description": "kjdasdbmn",**
+**&quot;description&quot;**** : ****&quot;kjdasdbmn&quot; ****,**
 
-**"status": 3,**
+**&quot;status&quot;**** : **** 3 ****,**
 
-**"is\_publish": true,**
+**&quot;is\_publish&quot;**** : **** true ****,**
 
-**"sku": "DEVTEST3379",**
+**&quot;sku&quot;**** : ****&quot;DEVTEST3379&quot; ****,**
 
-**"quantity": 10,**
+**&quot;quantity&quot;**** : **** 10 ****,**
 
-**"template": null,**
+**&quot;template&quot;**** : **** null ****,**
 
-**"sale\_uom": null,**
+**&quot;sale\_uom&quot;**** : **** null ****,**
 
-**"purchasable": true,**
+**&quot;purchasable&quot;**** : **** true ****,**
 
-**"scan\_required": true,**
+**&quot;scan\_required&quot;**** : **** true ****,**
 
-**"salable": true,**
+**&quot;salable&quot;**** : **** true ****,**
 
-**"sticky\_category\_id": 12,**
+**&quot;sticky\_category\_id&quot;**** : **** 12 ****,**
 
-**"is\_shippable": true,**
+**&quot;is\_shippable&quot;**** : **** true ****,**
 
-**"shipping\_digital\_url": null,**
+**&quot;shipping\_digital\_url&quot;**** : **** null ****,**
 
-**"type": null,**
+**&quot;type&quot;**** : **** null ****,**
 
-**"vendor": null,**
+**&quot;vendor&quot;**** : **** null ****,**
 
-**"tags": \[\],**
+**&quot;tags&quot;**** : [],**
 
-**"is\_digital": false,**
+**&quot;is\_digital&quot;**** : **** false ****,**
 
-**"weight": null,**
+**&quot;weight&quot;**** : **** null ****,**
 
-**"weight\_uom": null,**
+**&quot;weight\_uom&quot;**** : **** null ****,**
 
-**"width": null,**
+**&quot;width&quot;**** : **** null ****,**
 
-**"height": null,**
+**&quot;height&quot;**** : **** null ****,**
 
-**"length": null,**
+**&quot;length&quot;**** : **** null ****,**
 
-**"dimensions\_uom": null,**
+**&quot;dimensions\_uom&quot;**** : **** null ****,**
 
-**"flavor": null,**
+**&quot;flavor&quot;**** : **** null ****,**
 
-**"supplement\_type": null,**
+**&quot;supplement\_type&quot;**** : **** null ****,**
 
-**"pills\_per\_bottle": null,**
+**&quot;pills\_per\_bottle&quot;**** : **** null ****,**
 
-**"print": null,**
+**&quot;print&quot;**** : **** null ****,**
 
-**"suppliers": \[\],**
+**&quot;suppliers&quot;**** : [],**
 
-**"hs\_code": null,**
+**&quot;hs\_code&quot;**** : **** null ****,**
 
-**"vendor\_lead\_time": null,**
+**&quot;vendor\_lead\_time&quot;**** : **** null ****,**
 
-**"country\_id": null,**
+**&quot;country\_id&quot;**** : **** null ****,**
 
-**"handle": null,**
+**&quot;handle&quot;**** : **** null ****,**
 
-**"gs1": null,**
+**&quot;gs1&quot;**** : **** null ****,**
 
-**"has\_variants": false,**
+**&quot;has\_variants&quot;**** : **** false ****,**
 
-**"variant\_options": \[\],**
+**&quot;variant\_options&quot;**** : [],**
 
-**"variant\_option\_preview": \[\],**
+**&quot;variant\_option\_preview&quot;**** : [],**
 
-**"instance\_response": {**
+**&quot;instance\_response&quot;**** : {**
 
-**"status": "pending",**
+**&quot;status&quot;**** : ****&quot;pending&quot; ****,**
 
-**"data": null,**
+**&quot;data&quot;**** : **** null ****,**
 
-**"payload": {**
+**&quot;payload&quot;**** : {**
 
-**"product\_name": "OTO: Product fulfil media test 0321",**
+**&quot;product\_name&quot;**** : ****&quot;OTO: Product fulfil media test 0321&quot; ****,**
 
-**"product\_sku": "DEVTEST3379",**
+**&quot;product\_sku&quot;**** : ****&quot;DEVTEST3379&quot; ****,**
 
-**"product\_price": "10",**
+**&quot;product\_price&quot;**** : ****&quot;10&quot; ****,**
 
-**"product\_description": "kjdasdbmn",**
+**&quot;product\_description&quot;**** : ****&quot;kjdasdbmn&quot; ****,**
 
-**"product\_max\_quantity": "10",**
+**&quot;product\_max\_quantity&quot;**** : ****&quot;10&quot; ****,**
 
-**"shippable": true,**
+**&quot;shippable&quot;**** : **** true ****,**
 
-**"shipping\_weight": null,**
+**&quot;shipping\_weight&quot;**** : **** null ****,**
 
-**"weight\_unit\_id": null,**
+**&quot;weight\_unit\_id&quot;**** : **** null ****,**
 
-**"category\_id": 12,**
+**&quot;category\_id&quot;**** : **** 12 ****,**
 
-**"events": \[**
+**&quot;events&quot;**** : [**
 
-**"Order Refund"**
+**&quot;Order Refund&quot;**
 
-**\]**
+**]**
 
 **}**
 
 **},**
 
-**"update\_response": null,**
+**&quot;update\_response&quot;**** : **** null ****,**
 
-**"created\_at": "07/01/2021",**
+**&quot;created\_at&quot;**** : ****&quot;07/01/2021&quot; ****,**
 
-**"updated\_at": "2021-07-01T14:18:53.000000Z",**
+**&quot;updated\_at&quot;**** : ****&quot;2021-07-01T14:18:53.000000Z&quot; ****,**
 
-**"channel": {**
+**&quot;channel&quot;**** : {**
 
-**"id": 2,**
+**&quot;id&quot;**** : **** 2 ****,**
 
-**"company\_id": 1,**
+**&quot;company\_id&quot;**** : **** 1 ****,**
 
-**"name": "SR Sticky.io/LL",**
+**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
 
-**"description": null,**
+**&quot;description&quot;**** : **** null ****,**
 
-**"credential": {**
+**&quot;credential&quot;**** : {**
 
-**"url": "https://sos.limelightcrm.com/api/",**
+**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
 
-**"username": "api-sos-live",**
+**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
 
-**"password": "s7SVBrnswPAmsV",**
+**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
 
-**"product\_url":
-"https://sos.limelightcrm.com/admin/products/products.php?product\_id="**
-
-**},**
-
-**"type": "sticky",**
-
-**"is\_active": true,**
-
-**"created\_at": "02/25/2021",**
-
-**"updated\_at": "2021-05-24T11:25:08.000000Z"**
+**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
 
 **},**
 
-**"companies": {**
+**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
 
-**"id": 1,**
+**&quot;is\_active&quot;**** : **** true ****,**
 
-**"name": "Steel River",**
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
 
-**"description": "description",**
-
-**"is\_active": true,**
-
-**"created\_at": "02/25/2021",**
-
-**"updated\_at": "2021-04-23T09:11:28.000000Z"**
+**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot;**
 
 **},**
 
-**"country": null,**
+**&quot;companies&quot;**** : {**
 
-**"child\_products": null,**
+**&quot;id&quot;**** : **** 1 ****,**
 
-**"instance\_status": "pending",**
+**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
 
-**"instance\_id": null,**
+**&quot;description&quot;**** : ****&quot;description&quot; ****,**
 
-**"instance\_product\_url":
-"https://sos.limelightcrm.com/admin/products/products.php?product\_id="**
+**&quot;is\_active&quot;**** : **** true ****,**
+
+**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
+
+**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot;**
+
+**},**
+
+**&quot;country&quot;**** : **** null ****,**
+
+**&quot;child\_products&quot;**** : **** null ****,**
+
+**&quot;instance\_status&quot;**** : ****&quot;pending&quot; ****,**
+
+**&quot;instance\_id&quot;**** : **** null ****,**
+
+**&quot;instance\_product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
 
 **}**
 
-**\]**
+**]**
 
 **}**
 
-**POST api/admin/product**
+**POST**  **api/admin/product**
 
 This API is used to create new product
 
 **Request Parameter**
 
-  **Parameter**            **Validation**                                          **Description**
-  ------------------------ ------------------------------------------------------- -----------------------------------------------------------------------------------
-  title                    Required                                                Title of the product
-  sku                      Required                                                SKU of the product
-  description              Required                                                Description of the product
-  price                    Required                                                Price of the product
-  cost                     Required                                                Cost of the product
-  quantity                 Required for sticky and shopify                         Max quantity for sticky, quantity for shopify
-  template                 Required for fulfil | Optional if product has variant   Fulfil product template
-  salable                  Optional (Fulfil)                                       Is the product salable or not (default 1 = yes)
-  scan\_required           Optional (Fulfil)                                       Is the product scan required or not (default 1 = yes)
-  purchasable              Optional (Fulfil)                                       Is the product purchasable or not (default 1 = yes)
-  vendor                   Optional (Fulfil)                                       Vendor/brand of the product
-  hs\_code                 Optional (Fulfil)                                       Hs Code for the product
-  vendor\_lead\_time       Optional (Fulfil)                                       Vendor lead time of the product
-  country                  Optional (Fulfil)                                       Country or origin of the product
-  weight                   Optional                                                Weight of the product
-  weight\_uom              Optional                                                Weight uom of the product
-  height                   Optional                                                Height of the product
-  width                    Optional                                                Width of the product
-  length                   Optional                                                Length of the product
-  dimensions\_uom          Optional                                                Dimension uom of the product
-  shippable                Optional                                                Is the product shippable or not (default 1 = yes)
-  sticky\_category\_id     Required for sticky                                     Sticky category of the product
-  is\_digital              Optional for sticky                                     Is the product digital or not (default 0 = no)
-  shipping\_digital\_url   Optional for sticky                                     Digital url of the product
-  type                     Optional for shopify                                    Type of the product
-  vendor                   Optional for shopify                                    Vendor of the product
-  tags                     Optional for shopify                                    Tags of the product (value separated by comma)
-  is\_publish              Optional for shopify                                    Status of the product (value can be either active or draft, default value active)
-  variant\_options         Optional for shopify                                    Variant options of the product for shopify and fulfil
-  image                    Optional for shopify and fulfil                         Image of product (Image url or base64 encode image data)
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| title | Required | Title of the product |
+| sku | Required | SKU of the product |
+| description | Required | Description of the product |
+| price | Required | Price of the product |
+| cost | Required | Cost of the product |
+| quantity | Required for sticky and shopify | Max quantity for sticky, quantity for shopify |
+| template | Required for fulfil | Optional if product has variant | Fulfil product template |
+| salable | Optional (Fulfil) | Is the product salable or not (default 1 = yes) |
+| scan\_required | Optional (Fulfil) | Is the product scan required or not (default 1 = yes) |
+| purchasable | Optional (Fulfil) | Is the product purchasable or not (default 1 = yes) |
+| vendor | Optional (Fulfil) | Vendor/brand of the product |
+| hs\_code | Optional (Fulfil) | Hs Code for the product |
+| vendor\_lead\_time | Optional (Fulfil) | Vendor lead time of the product |
+| country | Optional (Fulfil) | Country or origin of the product |
+| weight | Optional | Weight of the product |
+| weight\_uom | Optional | Weight uom of the product |
+| height | Optional | Height of the product |
+| width | Optional | Width of the product |
+| length | Optional | Length of the product |
+| dimensions\_uom | Optional | Dimension uom of the product |
+| shippable | Optional | Is the product shippable or not (default 1 = yes) |
+| sticky\_category\_id | Required for sticky | Sticky category of the product |
+| is\_digital | Optional for sticky | Is the product digital or not (default 0 = no) |
+| shipping\_digital\_url | Optional for sticky | Digital url of the product |
+| type | Optional for shopify | Type of the product |
+| vendor | Optional for shopify | Vendor of the product |
+| tags | Optional for shopify | Tags of the product (value separated by comma) |
+| is\_publish | Optional for shopify | Status of the product (value can be either active or draft, default value active) |
+| variant\_options | Optional for shopify | Variant options of the product for shopify and fulfil |
+| image | Optional for shopify and fulfil | Image of product (Image url or base64 encode image data) |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"message": “Product created”**
+**&quot;message&quot;**** : ****&quot;Product created&quot;**
 
 **}**
 
-**PUT api/admin/product/{id}**
+**PUT**  **api/admin/product/{id}**
 
 This API is used to update existing channel
 
 **Request Parameter**
 
-  **Parameter**            **Validation**                                          **Description**
-  ------------------------ ------------------------------------------------------- -----------------------------------------------------------------------------------
-  title                    Required                                                Title of the product
-  sku                      Required                                                SKU of the product
-  description              Required                                                Description of the product
-  price                    Required                                                Price of the product
-  cost                     Required                                                Cost of the product
-  quantity                 Required for sticky and shopify                         Max quantity for sticky, quantity for shopify
-  template                 Required for fulfil | Optional if product has variant   Fulfil product template
-  salable                  Optional (Fulfil)                                       Is the product salable or not (default 1 = yes)
-  scan\_required           Optional (Fulfil)                                       Is the product scan required or not (default 1 = yes)
-  purchasable              Optional (Fulfil)                                       Is the product purchasable or not (default 1 = yes)
-  vendor                   Optional (Fulfil)                                       Vendor/brand of the product
-  hs\_code                 Optional (Fulfil)                                       Hs Code for the product
-  vendor\_lead\_time       Optional (Fulfil)                                       Vendor lead time of the product
-  country                  Optional (Fulfil)                                       Country or origin of the product
-  weight                   Optional                                                Weight of the product
-  weight\_uom              Optional                                                Weight uom of the product
-  height                   Optional                                                Height of the product
-  width                    Optional                                                Width of the product
-  length                   Optional                                                Length of the product
-  dimensions\_uom          Optional                                                Dimension uom of the product
-  shippable                Optional                                                Is the product shippable or not (default 1 = yes)
-  sticky\_category\_id     Required for sticky                                     Sticky category of the product
-  is\_digital              Optional for sticky                                     Is the product digital or not (default 0 = no)
-  shipping\_digital\_url   Optional for sticky                                     Digital url of the product
-  type                     Optional for shopify                                    Type of the product
-  vendor                   Optional for shopify                                    Vendor of the product
-  tags                     Optional for shopify                                    Tags of the product (value separated by comma)
-  is\_publish              Optional for shopify                                    Status of the product (value can be either active or draft, default value active)
-  variant\_options         Optional for shopify                                    Variant options of the product for shopify and fulfil
-  image                    Optional for shopify and fulfil                         Image of product (Image url or base64 encode image data)
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| title | Required | Title of the product |
+| sku | Required | SKU of the product |
+| description | Required | Description of the product |
+| price | Required | Price of the product |
+| cost | Required | Cost of the product |
+| quantity | Required for sticky and shopify | Max quantity for sticky, quantity for shopify |
+| template | Required for fulfil | Optional if product has variant | Fulfil product template |
+| salable | Optional (Fulfil) | Is the product salable or not (default 1 = yes) |
+| scan\_required | Optional (Fulfil) | Is the product scan required or not (default 1 = yes) |
+| purchasable | Optional (Fulfil) | Is the product purchasable or not (default 1 = yes) |
+| vendor | Optional (Fulfil) | Vendor/brand of the product |
+| hs\_code | Optional (Fulfil) | Hs Code for the product |
+| vendor\_lead\_time | Optional (Fulfil) | Vendor lead time of the product |
+| country | Optional (Fulfil) | Country or origin of the product |
+| weight | Optional | Weight of the product |
+| weight\_uom | Optional | Weight uom of the product |
+| height | Optional | Height of the product |
+| width | Optional | Width of the product |
+| length | Optional | Length of the product |
+| dimensions\_uom | Optional | Dimension uom of the product |
+| shippable | Optional | Is the product shippable or not (default 1 = yes) |
+| sticky\_category\_id | Required for sticky | Sticky category of the product |
+| is\_digital | Optional for sticky | Is the product digital or not (default 0 = no) |
+| shipping\_digital\_url | Optional for sticky | Digital url of the product |
+| type | Optional for shopify | Type of the product |
+| vendor | Optional for shopify | Vendor of the product |
+| tags | Optional for shopify | Tags of the product (value separated by comma) |
+| is\_publish | Optional for shopify | Status of the product (value can be either active or draft, default value active) |
+| variant\_options | Optional for shopify | Variant options of the product for shopify and fulfil |
+| image | Optional for shopify and fulfil | Image of product (Image url or base64 encode image data) |
 
 **Response**
 
 **{**
 
-**"status": "success",**
+**&quot;status&quot;**** : ****&quot;success&quot; ****,**
 
-**"message": “Product update”**
+**&quot;message&quot;**** : ****&quot;Product update&quot;**
 
 **}**
 
-**PUT api/admin/product/bulk/upload**
+**PUT**  **api/admin/product/bulk/upload**
 
 This API is used to create bulk product using CSV file
 
 **Request Parameter**
 
-  **Parameter**   **Validation**   **Description**
-  --------------- ---------------- ------------------------------------
-  csv\_file       Required         CSV file includes list of products
+| **Parameter** | **Validation** | **Description** |
+| --- | --- | --- |
+| csv\_file | Required | CSV file includes list of products |
 
-**GET api/admin/product/template/{channel\_id}**
+**GET**  **api/admin/product/template/{channel\_id}**
 
 This API is used to fetch all fulfil template list from fulfill
 
-**GET api/admin/product/fulfil\_category/{channel\_id}**
+**GET**  **api/admin/product/fulfil\_category/{channel\_id}**
 
 This API is used to fetch all fulfil category list from fulfill
 
-**GET api/admin/product/fulfil\_product\_supplier/{channel\_id}**
+**GET**  **api/admin/product/fulfil\_product\_supplier/{channel\_id}**
 
 This API is used to fetch all fulfil product supplier list from fulfill
 
-**GET api/admin/product/sticky\_category/{channel\_id}**
+**GET**  **api/admin/product/sticky\_category/{channel\_id}**
 
 This API is used to fetch all sticky category list from sticky
 
-**GET api/country**
+**GET**  **api/country**
 
 This API is used to fetch list of country from fulfil
 
 #### **3rd Party API documentation**
 
-These APIs below are used from 3rd party crm like in Fulfil, Shopify and
-Sticky. These API are used to perform many different actions throughout
-the system like create product, update product etc.
+These APIs below are used from 3rd party crm like in Fulfil, Shopify and Sticky. These API are used to perform many different actions throughout the system like create product, update product etc.
 
 ##### **Fulfil**
 
-**GET /model/product.template**
+**GET**  **/model/product.template**
 
 This API is used to retrieve all Product Templates from Fulfi.
 
-Location: app\\Instances\\Fulfil.php Method: getProductTemplate
+Location: app\Instances\Fulfil.php Method: getProductTemplate
 
-**GET /model/product.category**
+**GET**  **/model/product.category**
 
 This API is used to retrieve all Product Categories from Fulfi.
 
-Location: app\\Instances\\Fulfil.php Method: getProductCategory
+Location: app\Instances\Fulfil.php Method: getProductCategory
 
-**POST /model/product.product**
+**POST**  **/model/product.product**
 
 This API is used to create a new product for Fulfil.
 
-Location: app\\Instances\\Fulfil.php Method: insertProductToFulfil
+Location: app\Instances\Fulfil.php Method: insertProductToFulfil
 
-**PUT /model/product.product/{product\_id}/add\_media**
+**PUT**  **/model/product.product/{product\_id}/add\_media**
 
 This API is used to upload media to a product on Fulfil.
 
-Location: app\\Instances\\Fulfil.php Method: uploadMedia
+Location: app\Instances\Fulfil.php Method: uploadMedia
 
-**PUT /model/product.product/{product\_id}**
+**PUT**  **/model/product.product/{product\_id}**
 
 This API is used to update information of a product on Fulfil.
 
-Location: app\\Instances\\Fulfil.php Method: updateProductToFulfil
+Location: app\Instances\Fulfil.php Method: updateProductToFulfil
 
-**PUT /model/country.country/search**
+**PUT**  **/model/country.country/search**
 
 This API is used to fetch a country by country code on Fulfil.
 
-Location: app\\Instances\\Fulfil.php Method: getCountryIdOnFulfil
+Location: app\Instances\Fulfil.php Method: getCountryIdOnFulfil
 
-**PUT /model/party.party?per\_page=500&is\_supplier=true**
+**PUT**  **/model/party.party?per\_page=500&amp;is\_supplier=true**
 
 This API is used to fetch a list of product suppliers from Fulfil.
 
-Location: app\\Instances\\Fulfil.php Method: getProductSupplier
+Location: app\Instances\Fulfil.php Method: getProductSupplier
 
-**POST /model/purchase.product\_supplier**
+**POST**  **/model/purchase.product\_supplier**
 
 This API is used to create a new product supplier to Fulfil.
 
-Location: app\\Instances\\Fulfil.php Method: setProductSuppliers
+Location: app\Instances\Fulfil.php Method: setProductSuppliers
 
-**POST /model/product.template**
+**POST**  **/model/product.template**
 
 This API is used to create a product template to Fulfil.
 
-Location: app\\Instances\\Fulfil.php Method: createProductTemplate
+Location: app\Instances\Fulfil.php Method: createProductTemplate
 
 ##### **Sticky**
 
-**GET /v2/categories**
+**GET**  **/v2/categories**
 
 This API is used to retrieve all Product Categories from sticky.
 
-Location: app\\Instances\\Sticky.php Method: getStickyProductCategories
+Location: app\Instances\Sticky.php Method: getStickyProductCategories
 
-**POST /v1/product\_create**
+**POST**  **/v1/product\_create**
 
 This API is used to create a new product for sticky.
 
-Location: app\\Instances\\Sticky.php Method: insertProductToSticky
+Location: app\Instances\Sticky.php Method: insertProductToSticky
 
-**POST /v1/product\_update**
+**POST**  **/v1/product\_update**
 
 This API is used to update information of a product on Sticky.
 
-Location: app\\Instances\\Sticky.php Method: updateProductToSticky
+Location: app\Instances\Sticky.php Method: updateProductToSticky
 
 ##### **Shopify**
 
-**GET /products/{id}.json?fields=handle**
+**GET**  **/products/{id}.json?fields=handle**
 
 This API is used to retrieve all Product handles from Shopify.
 
-Location: app\\Instances\\Shopify.php Method: getProductHandle
+Location: app\Instances\Shopify.php Method: getProductHandle
 
-**POST /products.json**
+**POST**  **/products.json**
 
 This API is used to create a new product for Shopify.
 
-Location: app\\Instances\\Shopify.php Method: insertProductToShopify
+Location: app\Instances\Shopify.php Method: insertProductToShopify
 
-**POST /products/{id}.json**
+**POST**  **/products/{id}.json**
 
 This API is used to update information of a product on Shopify.
 
-Location: app\\Instances\\Shopify.php Method: updateProductToShopify
+Location: app\Instances\Shopify.php Method: updateProductToShopify
 
 #### **Citation information**
 
-In this project we used laravel as back end and vue as frontend
-technology. In this project we also use fulfil, sticky, shopify crm and
-their APIs. We are using Laravel sanctum for Single Page Application.
+In this project we used laravel as back end and vue as frontend technology. In this project we also use fulfil, sticky, shopify crm and their APIs. We are using Laravel sanctum for Single Page Application.
 
 This below vue packages are used in this project
 
-Vuex - [*https://vuex.vuejs.org/*](https://vuex.vuejs.org/)
+Vuex - [https://vuex.vuejs.org/](https://vuex.vuejs.org/)
 
-Vue-router -
-[*https://router.vuejs.org/installation.html*](https://router.vuejs.org/installation.html)
+Vue-router - [https://router.vuejs.org/installation.html](https://router.vuejs.org/installation.html)
 
-Vue-multiselect -
-[*https://vue-multiselect.js.org/\#sub-getting-started*](https://vue-multiselect.js.org/#sub-getting-started)
+Vue-multiselect - [https://vue-multiselect.js.org/#sub-getting-started](https://vue-multiselect.js.org/#sub-getting-started)
 
-Vue-progressbar -
-[*https://www.npmjs.com/package/vue-progressbar*](https://www.npmjs.com/package/vue-progressbar)
+Vue-progressbar - [https://www.npmjs.com/package/vue-progressbar](https://www.npmjs.com/package/vue-progressbar)
 
-Vue-route-middleware -
-[*https://www.npmjs.com/package/vue-route-middleware*](https://www.npmjs.com/package/vue-route-middleware)
+Vue-route-middleware - [https://www.npmjs.com/package/vue-route-middleware](https://www.npmjs.com/package/vue-route-middleware)
 
-Vue2-dropzone -
-[*https://www.npmjs.com/package/vue2-dropzone*](https://www.npmjs.com/package/vue2-dropzone)
+Vue2-dropzone - [https://www.npmjs.com/package/vue2-dropzone](https://www.npmjs.com/package/vue2-dropzone)
 
-Vuelidate -
-[*https://vuelidate.js.org/\#getting-started*](https://vuelidate.js.org/#getting-started)
+Vuelidate - [https://vuelidate.js.org/#getting-started](https://vuelidate.js.org/#getting-started)
 
 ##### References
 
-[*https://laravel.com/docs/8.x*](https://laravel.com/docs/8.x)
+[https://laravel.com/docs/8.x](https://laravel.com/docs/8.x)
 
-[*https://vuejs.org/v2/guide/*](https://vuejs.org/v2/guide/)
+[https://vuejs.org/v2/guide/](https://vuejs.org/v2/guide/)
 
-[*https://laravel.com/docs/8.x/sanctum\#introduction*](https://laravel.com/docs/8.x/sanctum#introduction)
+[https://laravel.com/docs/8.x/sanctum#introduction](https://laravel.com/docs/8.x/sanctum#introduction)
 
-[*https://developer-prod.sticky.io/*](https://developer-prod.sticky.io/)
+[https://developer-prod.sticky.io/](https://developer-prod.sticky.io/)
 
-[*https://developers.fulfil.io/*](https://developers.fulfil.io/)
+[https://developers.fulfil.io/](https://developers.fulfil.io/)
 
 #### **Contributors**
 
-Contributor of this project are CodeClouds team
-([*team@codeclouds.biz*](mailto:team@codeclouds.biz))
+Contributor of this project are CodeClouds team ([team@codeclouds.biz](mailto:team@codeclouds.biz))

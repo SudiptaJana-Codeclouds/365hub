@@ -251,7 +251,7 @@ This API used for signing up into the system
 
 ```
 {
-    "success"** : **"Register successful"
+    "success" : "Register successful"
 }
 ```
 
@@ -270,105 +270,58 @@ This API used for login into the system
 
 **Response**
 
-**{**
-
-**&quot;auth\_token&quot;**** : ****&quot;125|SUHBRtB3nDq0xfkZF0yLAE5dmv9UkfzMekCCwfn2&quot; ****,**
-
-**&quot;token\_type&quot;**** : ****&quot;Bearer&quot; ****,**
-
-**&quot;message&quot;**** : ****&quot;login successful&quot; ****,**
-
-**&quot;user&quot;**** : {**
-
-**&quot;id&quot;**** : **** 24 ****,**
-
-**&quot;name&quot;**** : ****&quot;Sd&quot; ****,**
-
-**&quot;email&quot;**** : ****&quot;sudipta.jana@codeclouds.in&quot; ****,**
-
-**&quot;email\_verified\_at&quot;**** : **** null ****,**
-
-**&quot;deleted\_at&quot;**** : **** null ****,**
-
-**&quot;last\_login\_at&quot;**** : ****&quot;2021-07-09T13:52:04.000000Z&quot; ****,**
-
-**&quot;last\_login\_ip&quot;**** : ****&quot;127.0.0.1&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;30 Jun, 2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-07-09T13:52:04.000000Z&quot; ****,**
-
-**&quot;role&quot;**** : {**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;name&quot;**** : ****&quot;sub admin&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;deleted\_at&quot;**** : **** null ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;2021-05-31T15:11:11.000000Z&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-31T15:18:13.000000Z&quot; ****,**
-
-**&quot;pivot&quot;**** : {**
-
-**&quot;user\_id&quot;**** : **** 24 ****,**
-
-**&quot;role\_id&quot;**** : **** 2**
-
-**}**
-
-**},**
-
-**&quot;permissions&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 26 ****,**
-
-**&quot;name&quot;**** : ****&quot;read product&quot; ****,**
-
-**&quot;slug&quot;**** : ****&quot;read-product&quot; ****,**
-
-**&quot;model&quot;**** : ****&quot;product&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;Can read product&quot; ****,**
-
-**&quot;content&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;Products&quot; ****,**
-
-**&quot;type&quot;**** : ****&quot;View&quot;**
-
-**},**
-
-**&quot;active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;2021-06-03T08:32:50.000000Z&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot; ****,**
-
-**&quot;pivot&quot;**** : {**
-
-**&quot;role\_id&quot;**** : **** 2 ****,**
-
-**&quot;permission\_id&quot;**** : **** 26**
-
-**}**
-
-**}**
-
-**],**
-
-**&quot;last\_login\_at\_diff\_for\_human&quot;**** : ****&quot;2 weeks ago&quot;**
-
-**}**
-
-**}**
+```
+{
+    "auth_token": "125|SUHBRtB3nDq0xfkZF0yLAE5dmv9UkfzMekCCwfn2",
+    "token_type": "Bearer",
+    "message": "login successful",
+    "user": {
+        "id": 24,
+        "name": "Sd",
+        "email": "sudipta.jana@codeclouds.in",
+        "email_verified_at": null,
+        "deleted_at": null,
+        "last_login_at": "2021-07-09T13:52:04.000000Z",
+        "last_login_ip": "127.0.0.1",
+        "is_active": true,
+        "created_at": "30 Jun, 2021",
+        "updated_at": "2021-07-09T13:52:04.000000Z",
+        "role": {
+            "id": 2,
+            "name": "sub admin",
+            "description": null,
+            "deleted_at": null,
+            "created_at": "2021-05-31T15:11:11.000000Z",
+            "updated_at": "2021-05-31T15:18:13.000000Z",
+            "pivot": {
+                "user_id": 24,
+                "role_id": 2
+            }
+        },
+        "permissions": [
+            {
+                "id": 26,
+                "name": "read product",
+                "slug": "read-product",
+                "model": "product",
+                "description": "Can read product",
+                "content": {
+                    "name": "Products",
+                    "type": "View"
+                },
+                "active": true,
+                "created_at": "2021-06-03T08:32:50.000000Z",
+                "updated_at": "2021-06-21T12:33:27.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 26
+                }
+            }
+        ],
+        "last_login_at_diff_for_human": "2 weeks ago"
+    }
+}
+```
 
 ##### **Forget Password**
 
@@ -390,105 +343,58 @@ This API is used to fetch the lists of companies
 
 **Response**
 
-**{**
-
-**&quot;data&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;description&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot; ****,**
-
-**&quot;channels&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 1 ****,**
-
-**&quot;company\_id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;SR Fulfil&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;credential&quot;**** : {**
-
-**&quot;url&quot;**** : ****&quot;https://365-holdings-sandbox.fulfil.io/api/v2/model/&quot; ****,**
-
-**&quot;x\_api\_key&quot;**** : ****&quot;a026a119032241aba46e757bed20814c&quot; ****,**
-
-**&quot;product\_url&quot;**** : ****&quot;https://365-holdings-sandbox.fulfil.io/client/#/model/product.product/&quot;**
-
-**},**
-
-**&quot;type&quot;**** : ****&quot;fulfil&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:24:02.000000Z&quot;**
-
-**}**
-
-**]**
-
-**},**
-
-**{**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;name&quot;**** : ****&quot;Nicki&#39;s Diapers&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-04-05T12:35:15.000000Z&quot; ****,**
-
-**&quot;channels&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 4 ****,**
-
-**&quot;company\_id&quot;**** : **** 2 ****,**
-
-**&quot;name&quot;**** : ****&quot;ND Fulfil&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;credential&quot;**** : **** null ****,**
-
-**&quot;type&quot;**** : **** null ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-02-25T08:54:45.000000Z&quot;**
-
-**}**
-
-**]**
-
-**}**
-
-**]**
-
-**}**
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Steel River",
+            "description": "description",
+            "is_active": true,
+            "created_at": "02/25/2021",
+            "updated_at": "2021-04-23T09:11:28.000000Z",
+            "channels": [
+                {
+                    "id": 1,
+                    "company_id": 1,
+                    "name": "SR Fulfil",
+                    "description": null,
+                    "credential": {
+                        "url": "https://365-holdings-sandbox.fulfil.io/api/v2/model/",
+                        "x_api_key": "a026a119032241aba46e757bed20814c",
+                        "product_url": "https://365-holdings-sandbox.fulfil.io/client/#/model/product.product/"
+                    },
+                    "type": "fulfil",
+                    "is_active": true,
+                    "created_at": "02/25/2021",
+                    "updated_at": "2021-05-24T11:24:02.000000Z"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Nicki’s Diapers",
+            "description": null,
+            "is_active": true,
+            "created_at": "02/25/2021",
+            "updated_at": "2021-04-05T12:35:15.000000Z",
+            "channels": [
+                {
+                    "id": 4,
+                    "company_id": 2,
+                    "name": "ND Fulfil",
+                    "description": null,
+                    "credential": null,
+                    "type": null,
+                    "is_active": true,
+                    "created_at": "02/25/2021",
+                    "updated_at": "2021-02-25T08:54:45.000000Z"
+                }
+            ]
+        }
+    ]
+}
+```
 
 **POST**  **api/admin/company**
 
@@ -502,23 +408,17 @@ This API is used to create new company
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;data&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;New Company&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-07-23T14:57:53.000000Z&quot; ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;07/23/2021&quot; ****,**
-
-**&quot;id&quot;**** : **** 9**
-
-**}**
-
-**}**
+```
+{
+    "status": "success",
+    "data": {
+        "name": "New Company",
+        "updated_at": "2021-07-23T14:57:53.000000Z",
+        "created_at": "07/23/2021",
+        "id": 9
+    }
+}
+```
 
 **PUT**  **api/admin/company/{id}**
 
@@ -532,23 +432,17 @@ This API is used to update existing company
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;data&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;New Company&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-07-23T14:57:53.000000Z&quot; ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;07/23/2021&quot; ****,**
-
-**&quot;id&quot;**** : **** 9**
-
-**}**
-
-**}**
+```
+{
+    "status": "success",
+    "data": {
+        "name": "New Company",
+        "updated_at": "2021-07-23T14:57:53.000000Z",
+        "created_at": "07/23/2021",
+        "id": 9
+    }
+}
+```
 
 **PUT**  **api/admin/company/status/update/{id}**
 
@@ -562,23 +456,17 @@ This API is used to update status of company (active or inactive)
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;data&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;New Company&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-07-23T14:57:53.000000Z&quot; ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;07/23/2021&quot; ****,**
-
-**&quot;id&quot;**** : **** 9**
-
-**}**
-
-**}**
+```
+{
+    "status": "success",
+    "data": {
+        "name": "New Company",
+        "updated_at": "2021-07-23T14:57:53.000000Z",
+        "created_at": "07/23/2021",
+        "id": 9
+    }
+}
+```
 
 ##### **Channel**
 

@@ -249,7 +249,7 @@ This API used for signing up into the system
 
 **Response**
 
-```
+```json
 {
     "success" : "Register successful"
 }
@@ -270,7 +270,7 @@ This API used for login into the system
 
 **Response**
 
-```
+```json
 {
     "auth_token": "125|SUHBRtB3nDq0xfkZF0yLAE5dmv9UkfzMekCCwfn2",
     "token_type": "Bearer",
@@ -343,7 +343,7 @@ This API is used to fetch the lists of companies
 
 **Response**
 
-```
+```json
 {
     "data": [
         {
@@ -408,7 +408,7 @@ This API is used to create new company
 
 **Response**
 
-```
+```json
 {
     "status": "success",
     "data": {
@@ -432,7 +432,7 @@ This API is used to update existing company
 
 **Response**
 
-```
+```json
 {
     "status": "success",
     "data": {
@@ -456,7 +456,7 @@ This API is used to update status of company (active or inactive)
 
 **Response**
 
-```
+```json
 {
     "status": "success",
     "data": {
@@ -476,111 +476,61 @@ This API is used to fetch the lists of channels
 
 **Response**
 
-**{**
-
-**&quot;data&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 1 ****,**
-
-**&quot;company\_id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;SR Fulfil&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;credential&quot;**** : {**
-
-**&quot;url&quot;**** : ****&quot;https://365-holdings-sandbox.fulfil.io/api/v2/model/&quot; ****,**
-
-**&quot;x\_api\_key&quot;**** : ****&quot;a026a119032241aba46e757bed20814c&quot; ****,**
-
-**&quot;product\_url&quot;**** : ****&quot;https://365-holdings-sandbox.fulfil.io/client/#/model/product.product/&quot;**
-
-**},**
-
-**&quot;type&quot;**** : ****&quot;fulfil&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:24:02.000000Z&quot; ****,**
-
-**&quot;company&quot;**** : {**
-
-**&quot;id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;description&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot;**
-
-**},**
-
-**&quot;instance\_options&quot;**** : []**
-
-**},**
-
-**{**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;company\_id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;credential&quot;**** : {**
-
-**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
-
-**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
-
-**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
-
-**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
-
-**},**
-
-**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot; ****,**
-
-**&quot;company&quot;**** : {**
-
-**&quot;id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;description&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot;**
-
-**},**
-
-**&quot;instance\_options&quot;**** : []**
-
-**}**
-
-**]**
-
-**}**
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "company_id": 1,
+            "name": "SR Fulfil",
+            "description": null,
+            "credential": {
+                "url": "https://365-holdings-sandbox.fulfil.io/api/v2/model/",
+                "x_api_key": "a026a119032241aba46e757bed20814c",
+                "product_url": "https://365-holdings-sandbox.fulfil.io/client/#/model/product.product/"
+            },
+            "type": "fulfil",
+            "is_active": true,
+            "created_at": "02/25/2021",
+            "updated_at": "2021-05-24T11:24:02.000000Z",
+            "company": {
+                "id": 1,
+                "name": "Steel River",
+                "description": "description",
+                "is_active": true,
+                "created_at": "02/25/2021",
+                "updated_at": "2021-04-23T09:11:28.000000Z"
+            },
+            "instance_options": []
+        },
+        {
+            "id": 2,
+            "company_id": 1,
+            "name": "SR Sticky.io/LL",
+            "description": null,
+            "credential": {
+                "url": "https://sos.limelightcrm.com/api/",
+                "username": "api-sos-live",
+                "password": "s7SVBrnswPAmsV",
+                "product_url": "https://sos.limelightcrm.com/admin/products/products.php?product_id="
+            },
+            "type": "sticky",
+            "is_active": true,
+            "created_at": "02/25/2021",
+            "updated_at": "2021-05-24T11:25:08.000000Z",
+            "company": {
+                "id": 1,
+                "name": "Steel River",
+                "description": "description",
+                "is_active": true,
+                "created_at": "02/25/2021",
+                "updated_at": "2021-04-23T09:11:28.000000Z"
+            },
+            "instance_options": []
+        }
+    ]
+}
+```
 
 **POST**  **api/admin/channel**
 
@@ -596,29 +546,20 @@ This API is used to create new channel
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;data&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;New Channel&quot; ****,**
-
-**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
-
-**&quot;company\_id&quot;**** : ****&quot;1&quot; ****,**
-
-**&quot;credential&quot;**** : **** null ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-07-26T07:22:17.000000Z&quot; ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;07/26/2021&quot; ****,**
-
-**&quot;id&quot;**** : **** 29**
-
-**}**
-
-**}**
+```json
+{
+    "status": "success",
+    "data": {
+        "name": "New Channel",
+        "type": "sticky",
+        "company_id": "1",
+        "credential": null,
+        "updated_at": "2021-07-26T07:22:17.000000Z",
+        "created_at": "07/26/2021",
+        "id": 29
+    }
+}
+```
 
 **PUT**  **api/admin/channel/{id}**
 
@@ -634,13 +575,12 @@ This API is used to update existing channel
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;data&quot;**** : **** true**
-
-**}**
+```json
+{
+    "status": "success",
+    "data": true
+}
+```
 
 **PUT**  **api/admin/channel/status/update/{id}**
 
@@ -654,13 +594,12 @@ This API is used to update status of channel (active or inactive)
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;data&quot;**** : **** true**
-
-**}**
+```json
+{
+    "status": "success",
+    "data": true
+}
+```
 
 ##### **User**
 
@@ -670,103 +609,57 @@ This API is used to fetch the lists of users
 
 **Response**
 
-**{**
-
-**&quot;data&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 24 ****,**
-
-**&quot;name&quot;**** : ****&quot;Sd&quot; ****,**
-
-**&quot;email&quot;**** : ****&quot;sudipta.jana@codeclouds.in&quot; ****,**
-
-**&quot;email\_verified\_at&quot;**** : **** null ****,**
-
-**&quot;deleted\_at&quot;**** : **** null ****,**
-
-**&quot;last\_login\_at&quot;**** : ****&quot;2021-07-23T14:51:50.000000Z&quot; ****,**
-
-**&quot;last\_login\_ip&quot;**** : ****&quot;127.0.0.1&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;30 Jun, 2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-07-23T14:51:50.000000Z&quot; ****,**
-
-**&quot;role&quot;**** : {**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;name&quot;**** : ****&quot;sub admin&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;deleted\_at&quot;**** : **** null ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;2021-05-31T15:11:11.000000Z&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-31T15:18:13.000000Z&quot; ****,**
-
-**&quot;pivot&quot;**** : {**
-
-**&quot;user\_id&quot;**** : **** 24 ****,**
-
-**&quot;role\_id&quot;**** : **** 2**
-
-**}**
-
-**},**
-
-**&quot;permissions&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 26 ****,**
-
-**&quot;name&quot;**** : ****&quot;read product&quot; ****,**
-
-**&quot;slug&quot;**** : ****&quot;read-product&quot; ****,**
-
-**&quot;model&quot;**** : ****&quot;product&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;Can read product&quot; ****,**
-
-**&quot;content&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;Products&quot; ****,**
-
-**&quot;type&quot;**** : ****&quot;View&quot;**
-
-**},**
-
-**&quot;active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;2021-06-03T08:32:50.000000Z&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot; ****,**
-
-**&quot;pivot&quot;**** : {**
-
-**&quot;role\_id&quot;**** : **** 2 ****,**
-
-**&quot;permission\_id&quot;**** : **** 26**
-
-**}**
-
-**}**
-
-**],**
-
-**&quot;last\_login\_at\_diff\_for\_human&quot;**** : ****&quot;2 days ago&quot;**
-
-**}**
-
-**]**
-
-**}**
+```json
+{
+    "data": [
+        {
+            "id": 24,
+            "name": "Sd",
+            "email": "sudipta.jana@codeclouds.in",
+            "email_verified_at": null,
+            "deleted_at": null,
+            "last_login_at": "2021-07-23T14:51:50.000000Z",
+            "last_login_ip": "127.0.0.1",
+            "is_active": true,
+            "created_at": "30 Jun, 2021",
+            "updated_at": "2021-07-23T14:51:50.000000Z",
+            "role": {
+                "id": 2,
+                "name": "sub admin",
+                "description": null,
+                "deleted_at": null,
+                "created_at": "2021-05-31T15:11:11.000000Z",
+                "updated_at": "2021-05-31T15:18:13.000000Z",
+                "pivot": {
+                    "user_id": 24,
+                    "role_id": 2
+                }
+            },
+            "permissions": [
+                {
+                    "id": 26,
+                    "name": "read product",
+                    "slug": "read-product",
+                    "model": "product",
+                    "description": "Can read product",
+                    "content": {
+                        "name": "Products",
+                        "type": "View"
+                    },
+                    "active": true,
+                    "created_at": "2021-06-03T08:32:50.000000Z",
+                    "updated_at": "2021-06-21T12:33:27.000000Z",
+                    "pivot": {
+                        "role_id": 2,
+                        "permission_id": 26
+                    }
+                }
+            ],
+            "last_login_at_diff_for_human": "2 days ago"
+        }
+    ]
+}
+```
 
 **PUT**  **api/admin/user/{id}**
 
@@ -782,13 +675,12 @@ This API is used to update existing user
 
 **Response**
 
-**{**
-
-**&quot;success&quot;**** : **** true ****,**
-
-**&quot;message&quot;**** : ****&quot;User updated&quot;**
-
-**}**
+```json
+{
+    "success": true,
+    "message": "User updated"
+}
+```
 
 **PUT**  **api/admin/user/status/update/{id}**
 
@@ -802,13 +694,12 @@ This API is used to update status of user (active or inactive)
 
 **Response**
 
-**{**
-
-**&quot;success&quot;**** : **** true ****,**
-
-**&quot;message&quot;**** : ****&quot;Status updated&quot;**
-
-**}**
+```json
+{
+    "success": true,
+    "message": "Status updated"
+}
+```
 
 **GET**  **api/admin/auth-user**
 
@@ -827,13 +718,12 @@ This API is used to update authorized user&#39;s data
 
 **Response**
 
-**{**
-
-**&quot;success&quot;**** : **** true ****,**
-
-**&quot;message&quot;**** : ****&quot;Profileh updated&quot;**
-
-**}**
+```json
+{
+    "success": true,
+    "message": "Profile updated"
+}
+```
 
 ##### **Role**
 
@@ -843,129 +733,70 @@ This API is used to fetch the lists of roles
 
 **Response**
 
-**{**
-
-**&quot;data&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;admin&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;deleted\_at&quot;**** : **** null ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;25 Feb, 2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-02-25T09:02:21.000000Z&quot; ****,**
-
-**&quot;total\_users\_count&quot;**** : **** 2 ****,**
-
-**&quot;permissions&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 4 ****,**
-
-**&quot;name&quot;**** : ****&quot;delete user&quot; ****,**
-
-**&quot;slug&quot;**** : ****&quot;delete-user&quot; ****,**
-
-**&quot;model&quot;**** : ****&quot;user&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;Can delete user&quot; ****,**
-
-**&quot;content&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;Users&quot; ****,**
-
-**&quot;type&quot;**** : ****&quot;Delete&quot;**
-
-**},**
-
-**&quot;active&quot;**** : **** false ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;2021-06-03T08:32:50.000000Z&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot; ****,**
-
-**&quot;pivot&quot;**** : {**
-
-**&quot;role\_id&quot;**** : **** 1 ****,**
-
-**&quot;permission\_id&quot;**** : **** 4**
-
-**}**
-
-**}**
-
-**]**
-
-**},**
-
-**{**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;name&quot;**** : ****&quot;sub admin&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;deleted\_at&quot;**** : **** null ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;31 May, 2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-31T15:18:13.000000Z&quot; ****,**
-
-**&quot;total\_users\_count&quot;**** : **** 3 ****,**
-
-**&quot;permissions&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 26 ****,**
-
-**&quot;name&quot;**** : ****&quot;read product&quot; ****,**
-
-**&quot;slug&quot;**** : ****&quot;read-product&quot; ****,**
-
-**&quot;model&quot;**** : ****&quot;product&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;Can read product&quot; ****,**
-
-**&quot;content&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;Products&quot; ****,**
-
-**&quot;type&quot;**** : ****&quot;View&quot;**
-
-**},**
-
-**&quot;active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;2021-06-03T08:32:50.000000Z&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot; ****,**
-
-**&quot;pivot&quot;**** : {**
-
-**&quot;role\_id&quot;**** : **** 2 ****,**
-
-**&quot;permission\_id&quot;**** : **** 26**
-
-**}**
-
-**}**
-
-**]**
-
-**}**
-
-**]**
-
-**}**
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "admin",
+            "description": null,
+            "deleted_at": null,
+            "created_at": "25 Feb, 2021",
+            "updated_at": "2021-02-25T09:02:21.000000Z",
+            "total_users_count": 2,
+            "permissions": [
+                {
+                    "id": 4,
+                    "name": "delete user",
+                    "slug": "delete-user",
+                    "model": "user",
+                    "description": "Can delete user",
+                    "content": {
+                        "name": "Users",
+                        "type": "Delete"
+                    },
+                    "active": false,
+                    "created_at": "2021-06-03T08:32:50.000000Z",
+                    "updated_at": "2021-06-21T12:33:27.000000Z",
+                    "pivot": {
+                        "role_id": 1,
+                        "permission_id": 4
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "sub admin",
+            "description": null,
+            "deleted_at": null,
+            "created_at": "31 May, 2021",
+            "updated_at": "2021-05-31T15:18:13.000000Z",
+            "total_users_count": 3,
+            "permissions": [
+                {
+                    "id": 26,
+                    "name": "read product",
+                    "slug": "read-product",
+                    "model": "product",
+                    "description": "Can read product",
+                    "content": {
+                        "name": "Products",
+                        "type": "View"
+                    },
+                    "active": true,
+                    "created_at": "2021-06-03T08:32:50.000000Z",
+                    "updated_at": "2021-06-21T12:33:27.000000Z",
+                    "pivot": {
+                        "role_id": 2,
+                        "permission_id": 26
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
 
 **POST**  **api/admin/role**
 
@@ -979,13 +810,12 @@ This API is used to create new role
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;message&quot;**** : ****&quot;Role is created&quot;**
-
-**}**
+```json
+{
+    "status": "success",
+    "message": “Role is created”
+}
+```
 
 **PUT**  **api/admin/role/{id}**
 
@@ -999,13 +829,12 @@ This API is used to update existing role
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;message&quot;**** : ****&quot;Permission update&quot;**
-
-**}**
+```json
+{
+    "status": "success",
+    "message": “Permission update”
+}
+```
 
 ##### **Permission**
 
@@ -1015,69 +844,40 @@ This API is used to fetch the lists of permissions
 
 **Response**
 
-**{**
-
-**&quot;data&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;create user&quot; ****,**
-
-**&quot;slug&quot;**** : ****&quot;create-user&quot; ****,**
-
-**&quot;model&quot;**** : ****&quot;user&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;Can create user&quot; ****,**
-
-**&quot;content&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;Users&quot; ****,**
-
-**&quot;type&quot;**** : ****&quot;Create&quot;**
-
-**},**
-
-**&quot;active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;03 Jun, 2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot;**
-
-**},**
-
-**{**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;name&quot;**** : ****&quot;read user&quot; ****,**
-
-**&quot;slug&quot;**** : ****&quot;read-user&quot; ****,**
-
-**&quot;model&quot;**** : ****&quot;user&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;Can read user&quot; ****,**
-
-**&quot;content&quot;**** : {**
-
-**&quot;name&quot;**** : ****&quot;Users&quot; ****,**
-
-**&quot;type&quot;**** : ****&quot;View&quot;**
-
-**},**
-
-**&quot;active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;03 Jun, 2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-06-21T12:33:27.000000Z&quot;**
-
-**}**
-
-**]**
-
-**}**
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "create user",
+            "slug": "create-user",
+            "model": "user",
+            "description": "Can create user",
+            "content": {
+                "name": "Users",
+                "type": "Create"
+            },
+            "active": true,
+            "created_at": "03 Jun, 2021",
+            "updated_at": "2021-06-21T12:33:27.000000Z"
+        },
+        {
+            "id": 2,
+            "name": "read user",
+            "slug": "read-user",
+            "model": "user",
+            "description": "Can read user",
+            "content": {
+                "name": "Users",
+                "type": "View"
+            },
+            "active": true,
+            "created_at": "03 Jun, 2021",
+            "updated_at": "2021-06-21T12:33:27.000000Z"
+        }
+    ]
+}
+```
 
 **PUT**  **api/admin/role/permission/update/{id}**
 
@@ -1092,13 +892,12 @@ This API is used to update permissions of a particular role
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;message&quot;**** : ****&quot;Permission update&quot;**
-
-**}**
+```json
+{
+    "status": "success",
+    "message": “Permission update”
+}
+```
 
 ##### **Product**
 
@@ -1108,465 +907,238 @@ This API is used to fetch the lists of products
 
 **Response**
 
-**{**
-
-**&quot;data&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 347 ****,**
-
-**&quot;company\_id&quot;**** : **** 1 ****,**
-
-**&quot;channel\_id&quot;**** : **** 2 ****,**
-
-**&quot;channels&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;company\_id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;credential&quot;**** : {**
-
-**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
-
-**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
-
-**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
-
-**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
-
-**},**
-
-**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot;**
-
-**}**
-
-**],**
-
-**&quot;title&quot;**** : ****&quot;OTO: Product fulfil media test 0321&quot; ****,**
-
-**&quot;price&quot;**** : **** 10 ****,**
-
-**&quot;cost&quot;**** : **** 10 ****,**
-
-**&quot;cost\_price\_method&quot;**** : ****&quot;average&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;kjdasdbmn&quot; ****,**
-
-**&quot;status&quot;**** : **** 3 ****,**
-
-**&quot;is\_publish&quot;**** : **** true ****,**
-
-**&quot;sku&quot;**** : ****&quot;DEVTEST3379&quot; ****,**
-
-**&quot;quantity&quot;**** : **** 10 ****,**
-
-**&quot;template&quot;**** : **** null ****,**
-
-**&quot;sale\_uom&quot;**** : **** null ****,**
-
-**&quot;purchasable&quot;**** : **** true ****,**
-
-**&quot;scan\_required&quot;**** : **** true ****,**
-
-**&quot;salable&quot;**** : **** true ****,**
-
-**&quot;sticky\_category\_id&quot;**** : **** 13 ****,**
-
-**&quot;is\_shippable&quot;**** : **** true ****,**
-
-**&quot;shipping\_digital\_url&quot;**** : **** null ****,**
-
-**&quot;type&quot;**** : **** null ****,**
-
-**&quot;vendor&quot;**** : **** null ****,**
-
-**&quot;tags&quot;**** : [],**
-
-**&quot;is\_digital&quot;**** : **** false ****,**
-
-**&quot;weight&quot;**** : **** null ****,**
-
-**&quot;weight\_uom&quot;**** : **** null ****,**
-
-**&quot;width&quot;**** : **** null ****,**
-
-**&quot;height&quot;**** : **** null ****,**
-
-**&quot;length&quot;**** : **** null ****,**
-
-**&quot;dimensions\_uom&quot;**** : **** null ****,**
-
-**&quot;flavor&quot;**** : **** null ****,**
-
-**&quot;supplement\_type&quot;**** : **** null ****,**
-
-**&quot;pills\_per\_bottle&quot;**** : **** null ****,**
-
-**&quot;print&quot;**** : **** null ****,**
-
-**&quot;suppliers&quot;**** : [],**
-
-**&quot;hs\_code&quot;**** : **** null ****,**
-
-**&quot;vendor\_lead\_time&quot;**** : **** null ****,**
-
-**&quot;country\_id&quot;**** : **** null ****,**
-
-**&quot;handle&quot;**** : **** null ****,**
-
-**&quot;gs1&quot;**** : **** null ****,**
-
-**&quot;has\_variants&quot;**** : **** false ****,**
-
-**&quot;variant\_options&quot;**** : [],**
-
-**&quot;variant\_option\_preview&quot;**** : [],**
-
-**&quot;instance\_response&quot;**** : {**
-
-**&quot;status&quot;**** : ****&quot;pending&quot; ****,**
-
-**&quot;data&quot;**** : **** null ****,**
-
-**&quot;payload&quot;**** : {**
-
-**&quot;product\_name&quot;**** : ****&quot;OTO: Product fulfil media test 0321&quot; ****,**
-
-**&quot;product\_sku&quot;**** : ****&quot;DEVTEST3379&quot; ****,**
-
-**&quot;product\_price&quot;**** : ****&quot;10&quot; ****,**
-
-**&quot;product\_description&quot;**** : ****&quot;kjdasdbmn&quot; ****,**
-
-**&quot;product\_max\_quantity&quot;**** : ****&quot;10&quot; ****,**
-
-**&quot;shippable&quot;**** : **** true ****,**
-
-**&quot;shipping\_weight&quot;**** : **** null ****,**
-
-**&quot;weight\_unit\_id&quot;**** : **** null ****,**
-
-**&quot;category\_id&quot;**** : **** 13 ****,**
-
-**&quot;events&quot;**** : [**
-
-**&quot;Order Refund&quot;**
-
-**]**
-
-**}**
-
-**},**
-
-**&quot;update\_response&quot;**** : **** null ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;07/01/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-07-01T14:18:53.000000Z&quot; ****,**
-
-**&quot;channel&quot;**** : {**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;company\_id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;credential&quot;**** : {**
-
-**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
-
-**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
-
-**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
-
-**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
-
-**},**
-
-**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot;**
-
-**},**
-
-**&quot;companies&quot;**** : {**
-
-**&quot;id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;description&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot;**
-
-**},**
-
-**&quot;country&quot;**** : **** null ****,**
-
-**&quot;child\_products&quot;**** : **** null ****,**
-
-**&quot;instance\_status&quot;**** : ****&quot;pending&quot; ****,**
-
-**&quot;instance\_id&quot;**** : **** null ****,**
-
-**&quot;instance\_product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
-
-**},**
-
-**{**
-
-**&quot;id&quot;**** : **** 346 ****,**
-
-**&quot;company\_id&quot;**** : **** 1 ****,**
-
-**&quot;channel\_id&quot;**** : **** 2 ****,**
-
-**&quot;channels&quot;**** : [**
-
-**{**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;company\_id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;credential&quot;**** : {**
-
-**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
-
-**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
-
-**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
-
-**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
-
-**},**
-
-**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot;**
-
-**}**
-
-**],**
-
-**&quot;title&quot;**** : ****&quot;OTO: Product fulfil media test 0321&quot; ****,**
-
-**&quot;price&quot;**** : **** 10 ****,**
-
-**&quot;cost&quot;**** : **** 10 ****,**
-
-**&quot;cost\_price\_method&quot;**** : ****&quot;average&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;kjdasdbmn&quot; ****,**
-
-**&quot;status&quot;**** : **** 3 ****,**
-
-**&quot;is\_publish&quot;**** : **** true ****,**
-
-**&quot;sku&quot;**** : ****&quot;DEVTEST3379&quot; ****,**
-
-**&quot;quantity&quot;**** : **** 10 ****,**
-
-**&quot;template&quot;**** : **** null ****,**
-
-**&quot;sale\_uom&quot;**** : **** null ****,**
-
-**&quot;purchasable&quot;**** : **** true ****,**
-
-**&quot;scan\_required&quot;**** : **** true ****,**
-
-**&quot;salable&quot;**** : **** true ****,**
-
-**&quot;sticky\_category\_id&quot;**** : **** 12 ****,**
-
-**&quot;is\_shippable&quot;**** : **** true ****,**
-
-**&quot;shipping\_digital\_url&quot;**** : **** null ****,**
-
-**&quot;type&quot;**** : **** null ****,**
-
-**&quot;vendor&quot;**** : **** null ****,**
-
-**&quot;tags&quot;**** : [],**
-
-**&quot;is\_digital&quot;**** : **** false ****,**
-
-**&quot;weight&quot;**** : **** null ****,**
-
-**&quot;weight\_uom&quot;**** : **** null ****,**
-
-**&quot;width&quot;**** : **** null ****,**
-
-**&quot;height&quot;**** : **** null ****,**
-
-**&quot;length&quot;**** : **** null ****,**
-
-**&quot;dimensions\_uom&quot;**** : **** null ****,**
-
-**&quot;flavor&quot;**** : **** null ****,**
-
-**&quot;supplement\_type&quot;**** : **** null ****,**
-
-**&quot;pills\_per\_bottle&quot;**** : **** null ****,**
-
-**&quot;print&quot;**** : **** null ****,**
-
-**&quot;suppliers&quot;**** : [],**
-
-**&quot;hs\_code&quot;**** : **** null ****,**
-
-**&quot;vendor\_lead\_time&quot;**** : **** null ****,**
-
-**&quot;country\_id&quot;**** : **** null ****,**
-
-**&quot;handle&quot;**** : **** null ****,**
-
-**&quot;gs1&quot;**** : **** null ****,**
-
-**&quot;has\_variants&quot;**** : **** false ****,**
-
-**&quot;variant\_options&quot;**** : [],**
-
-**&quot;variant\_option\_preview&quot;**** : [],**
-
-**&quot;instance\_response&quot;**** : {**
-
-**&quot;status&quot;**** : ****&quot;pending&quot; ****,**
-
-**&quot;data&quot;**** : **** null ****,**
-
-**&quot;payload&quot;**** : {**
-
-**&quot;product\_name&quot;**** : ****&quot;OTO: Product fulfil media test 0321&quot; ****,**
-
-**&quot;product\_sku&quot;**** : ****&quot;DEVTEST3379&quot; ****,**
-
-**&quot;product\_price&quot;**** : ****&quot;10&quot; ****,**
-
-**&quot;product\_description&quot;**** : ****&quot;kjdasdbmn&quot; ****,**
-
-**&quot;product\_max\_quantity&quot;**** : ****&quot;10&quot; ****,**
-
-**&quot;shippable&quot;**** : **** true ****,**
-
-**&quot;shipping\_weight&quot;**** : **** null ****,**
-
-**&quot;weight\_unit\_id&quot;**** : **** null ****,**
-
-**&quot;category\_id&quot;**** : **** 12 ****,**
-
-**&quot;events&quot;**** : [**
-
-**&quot;Order Refund&quot;**
-
-**]**
-
-**}**
-
-**},**
-
-**&quot;update\_response&quot;**** : **** null ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;07/01/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-07-01T14:18:53.000000Z&quot; ****,**
-
-**&quot;channel&quot;**** : {**
-
-**&quot;id&quot;**** : **** 2 ****,**
-
-**&quot;company\_id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;SR Sticky.io/LL&quot; ****,**
-
-**&quot;description&quot;**** : **** null ****,**
-
-**&quot;credential&quot;**** : {**
-
-**&quot;url&quot;**** : ****&quot;https://sos.limelightcrm.com/api/&quot; ****,**
-
-**&quot;username&quot;**** : ****&quot;api-sos-live&quot; ****,**
-
-**&quot;password&quot;**** : ****&quot;s7SVBrnswPAmsV&quot; ****,**
-
-**&quot;product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
-
-**},**
-
-**&quot;type&quot;**** : ****&quot;sticky&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-05-24T11:25:08.000000Z&quot;**
-
-**},**
-
-**&quot;companies&quot;**** : {**
-
-**&quot;id&quot;**** : **** 1 ****,**
-
-**&quot;name&quot;**** : ****&quot;Steel River&quot; ****,**
-
-**&quot;description&quot;**** : ****&quot;description&quot; ****,**
-
-**&quot;is\_active&quot;**** : **** true ****,**
-
-**&quot;created\_at&quot;**** : ****&quot;02/25/2021&quot; ****,**
-
-**&quot;updated\_at&quot;**** : ****&quot;2021-04-23T09:11:28.000000Z&quot;**
-
-**},**
-
-**&quot;country&quot;**** : **** null ****,**
-
-**&quot;child\_products&quot;**** : **** null ****,**
-
-**&quot;instance\_status&quot;**** : ****&quot;pending&quot; ****,**
-
-**&quot;instance\_id&quot;**** : **** null ****,**
-
-**&quot;instance\_product\_url&quot;**** : ****&quot;https://sos.limelightcrm.com/admin/products/products.php?product\_id=&quot;**
-
-**}**
-
-**]**
-
-**}**
+```json
+{
+    "data": [
+        {
+            "id": 347,
+            "company_id": 1,
+            "channel_id": 2,
+            "channels": [
+                {
+                    "id": 2,
+                    "company_id": 1,
+                    "name": "SR Sticky.io/LL",
+                    "description": null,
+                    "credential": {
+                        "url": "https://sos.limelightcrm.com/api/",
+                        "username": "api-sos-live",
+                        "password": "s7SVBrnswPAmsV",
+                        "product_url": "https://sos.limelightcrm.com/admin/products/products.php?product_id="
+                    },
+                    "type": "sticky",
+                    "is_active": true,
+                    "created_at": "02/25/2021",
+                    "updated_at": "2021-05-24T11:25:08.000000Z"
+                }
+            ],
+            "title": "OTO: Product fulfil media test 0321",
+            "price": 10,
+            "cost": 10,
+            "cost_price_method": "average",
+            "description": "kjdasdbmn",
+            "status": 3,
+            "is_publish": true,
+            "sku": "DEVTEST3379",
+            "quantity": 10,
+            "template": null,
+            "sale_uom": null,
+            "purchasable": true,
+            "scan_required": true,
+            "salable": true,
+            "sticky_category_id": 13,
+            "is_shippable": true,
+            "shipping_digital_url": null,
+            "type": null,
+            "vendor": null,
+            "tags": [],
+            "is_digital": false,
+            "weight": null,
+            "weight_uom": null,
+            "width": null,
+            "height": null,
+            "length": null,
+            "dimensions_uom": null,
+            "flavor": null,
+            "supplement_type": null,
+            "pills_per_bottle": null,
+            "print": null,
+            "suppliers": [],
+            "hs_code": null,
+            "vendor_lead_time": null,
+            "country_id": null,
+            "handle": null,
+            "gs1": null,
+            "has_variants": false,
+            "variant_options": [],
+            "variant_option_preview": [],
+            "instance_response": {
+                "status": "pending",
+                "data": null,
+                "payload": {
+                    "product_name": "OTO: Product fulfil media test 0321",
+                    "product_sku": "DEVTEST3379",
+                    "product_price": "10",
+                    "product_description": "kjdasdbmn",
+                    "product_max_quantity": "10",
+                    "shippable": true,
+                    "shipping_weight": null,
+                    "weight_unit_id": null,
+                    "category_id": 13,
+                    "events": [
+                        "Order Refund"
+                    ]
+                }
+            },
+            "update_response": null,
+            "created_at": "07/01/2021",
+            "updated_at": "2021-07-01T14:18:53.000000Z",
+            "channel": {
+                "id": 2,
+                "company_id": 1,
+                "name": "SR Sticky.io/LL",
+                "description": null,
+                "credential": {
+                    "url": "https://sos.limelightcrm.com/api/",
+                    "username": "api-sos-live",
+                    "password": "s7SVBrnswPAmsV",
+                    "product_url": "https://sos.limelightcrm.com/admin/products/products.php?product_id="
+                },
+                "type": "sticky",
+                "is_active": true,
+                "created_at": "02/25/2021",
+                "updated_at": "2021-05-24T11:25:08.000000Z"
+            },
+            "companies": {
+                "id": 1,
+                "name": "Steel River",
+                "description": "description",
+                "is_active": true,
+                "created_at": "02/25/2021",
+                "updated_at": "2021-04-23T09:11:28.000000Z"
+            },
+            "country": null,
+            "child_products": null,
+            "instance_status": "pending",
+            "instance_id": null,
+            "instance_product_url": "https://sos.limelightcrm.com/admin/products/products.php?product_id="
+        },
+        {
+            "id": 346,
+            "company_id": 1,
+            "channel_id": 2,
+            "channels": [
+                {
+                    "id": 2,
+                    "company_id": 1,
+                    "name": "SR Sticky.io/LL",
+                    "description": null,
+                    "credential": {
+                        "url": "https://sos.limelightcrm.com/api/",
+                        "username": "api-sos-live",
+                        "password": "s7SVBrnswPAmsV",
+                        "product_url": "https://sos.limelightcrm.com/admin/products/products.php?product_id="
+                    },
+                    "type": "sticky",
+                    "is_active": true,
+                    "created_at": "02/25/2021",
+                    "updated_at": "2021-05-24T11:25:08.000000Z"
+                }
+            ],
+            "title": "OTO: Product fulfil media test 0321",
+            "price": 10,
+            "cost": 10,
+            "cost_price_method": "average",
+            "description": "kjdasdbmn",
+            "status": 3,
+            "is_publish": true,
+            "sku": "DEVTEST3379",
+            "quantity": 10,
+            "template": null,
+            "sale_uom": null,
+            "purchasable": true,
+            "scan_required": true,
+            "salable": true,
+            "sticky_category_id": 12,
+            "is_shippable": true,
+            "shipping_digital_url": null,
+            "type": null,
+            "vendor": null,
+            "tags": [],
+            "is_digital": false,
+            "weight": null,
+            "weight_uom": null,
+            "width": null,
+            "height": null,
+            "length": null,
+            "dimensions_uom": null,
+            "flavor": null,
+            "supplement_type": null,
+            "pills_per_bottle": null,
+            "print": null,
+            "suppliers": [],
+            "hs_code": null,
+            "vendor_lead_time": null,
+            "country_id": null,
+            "handle": null,
+            "gs1": null,
+            "has_variants": false,
+            "variant_options": [],
+            "variant_option_preview": [],
+            "instance_response": {
+                "status": "pending",
+                "data": null,
+                "payload": {
+                    "product_name": "OTO: Product fulfil media test 0321",
+                    "product_sku": "DEVTEST3379",
+                    "product_price": "10",
+                    "product_description": "kjdasdbmn",
+                    "product_max_quantity": "10",
+                    "shippable": true,
+                    "shipping_weight": null,
+                    "weight_unit_id": null,
+                    "category_id": 12,
+                    "events": [
+                        "Order Refund"
+                    ]
+                }
+            },
+            "update_response": null,
+            "created_at": "07/01/2021",
+            "updated_at": "2021-07-01T14:18:53.000000Z",
+            "channel": {
+                "id": 2,
+                "company_id": 1,
+                "name": "SR Sticky.io/LL",
+                "description": null,
+                "credential": {
+                    "url": "https://sos.limelightcrm.com/api/",
+                    "username": "api-sos-live",
+                    "password": "s7SVBrnswPAmsV",
+                    "product_url": "https://sos.limelightcrm.com/admin/products/products.php?product_id="
+                },
+                "type": "sticky",
+                "is_active": true,
+                "created_at": "02/25/2021",
+                "updated_at": "2021-05-24T11:25:08.000000Z"
+            },
+            "companies": {
+                "id": 1,
+                "name": "Steel River",
+                "description": "description",
+                "is_active": true,
+                "created_at": "02/25/2021",
+                "updated_at": "2021-04-23T09:11:28.000000Z"
+            },
+            "country": null,
+            "child_products": null,
+            "instance_status": "pending",
+            "instance_id": null,
+            "instance_product_url": "https://sos.limelightcrm.com/admin/products/products.php?product_id="
+        }
+    ]
+}
+```
 
 **POST**  **api/admin/product**
 
@@ -1609,13 +1181,12 @@ This API is used to create new product
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;message&quot;**** : ****&quot;Product created&quot;**
-
-**}**
+```json
+{
+    "status": "success",
+    "message": “Product created”
+}
+```
 
 **PUT**  **api/admin/product/{id}**
 
@@ -1658,13 +1229,12 @@ This API is used to update existing channel
 
 **Response**
 
-**{**
-
-**&quot;status&quot;**** : ****&quot;success&quot; ****,**
-
-**&quot;message&quot;**** : ****&quot;Product update&quot;**
-
-**}**
+```json
+{
+    "status": "success",
+    "message": “Product update”
+}
+```
 
 **PUT**  **api/admin/product/bulk/upload**
 

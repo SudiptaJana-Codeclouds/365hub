@@ -813,7 +813,7 @@ This API is used to create new role
 ```json
 {
     "status": "success",
-    "message": “Role is created”
+    "message": "Role is created"
 }
 ```
 
@@ -832,7 +832,7 @@ This API is used to update existing role
 ```json
 {
     "status": "success",
-    "message": “Permission update”
+    "message": "Permission update"
 }
 ```
 
@@ -895,7 +895,7 @@ This API is used to update permissions of a particular role
 ```json
 {
     "status": "success",
-    "message": “Permission update”
+    "message": "Permission update"
 }
 ```
 
@@ -1184,7 +1184,7 @@ This API is used to create new product
 ```json
 {
     "status": "success",
-    "message": “Product created”
+    "message": "Product created”
 }
 ```
 
@@ -1232,7 +1232,7 @@ This API is used to update existing channel
 ```json
 {
     "status": "success",
-    "message": “Product update”
+    "message": "Product update"
 }
 ```
 

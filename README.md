@@ -1,4 +1,4 @@
-#### **Project Outline **
+## Project Outline
 
 365Hub is a brilliant approach to manage products using a single UI.
 Currently using this platform users can manage products, create and edit
@@ -6,15 +6,15 @@ them to the different channels. This platform will act as a hub for all
 365 instances like steelriver, alternascript, valley food storage, and
 others.
 
-#### **Getting Started**
+## Getting Started
 
-##### **Prerequisite**
+### Prerequisite
 
 -   Need XAMPP or any apache php based development environment
 
 -   Need node js 14.x or upper version
 
-##### **Installation instructions**
+### **Installation instructions**
 
 1.  At first you need to clone the git repository from GitHub, so youneed to login to the GitHub portal and get the clone URL.
     > ![](media/image3.png){width="6.5in" height="2.736111111111111in"}\
@@ -46,9 +46,9 @@ others.
 
 10. Hit the URL on the browser
 
-#### **Project Scope/Modules**
+## **Project Scope/Modules**
 
-##### **Users**
+### **Users**
 
 Users can log in and view their dashboard. They will get an invitation
 through mail by administration. After they receive their invitation they
@@ -64,7 +64,7 @@ a dropdown.
 
 ![](media/image2.png){width="6.5in" height="2.4444444444444446in"}
 
-##### **Roles**
+### **Roles**
 
 Every user has a particular role. Every role will have many actions and
 permissions. Admin can edit permission for every role. Admin can
@@ -75,7 +75,7 @@ the switch on edit role page.
 
 ![](media/image7.png){width="6.5in" height="3.263888888888889in"}
 
-##### **Permissions**
+### **Permissions**
 
 System will have some permissions. Admin can view the lists of
 permissions. From their account. Every permission has a self explanatory

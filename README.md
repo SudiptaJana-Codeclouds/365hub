@@ -15,7 +15,11 @@
 
 1. At first you need to clone the git repository from GitHub, so you need to login to the GitHub portal and get the clone URL.
  ![](RackMultipart20210729-4-3l75h2_html_13102690bc37330a.png)
+ 
+```
 git clone git@github.com:365holdings/365hub.git
+```
+
 2. Then go to your project app directory and clone the site using the below command.
 git clone git@github.com:365holdings/365hub.git
 3. Copy .env.example to new file .env using below command

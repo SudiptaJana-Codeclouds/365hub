@@ -249,11 +249,11 @@ This API used for signing up into the system
 
 **Response**
 
-**{**
-
-**&quot;success&quot;**** : ****&quot;Register successful&quot;**
-
-**}**
+```
+{
+    "success"** : **"Register successful"
+}
+```
 
 ##### **Login**
 

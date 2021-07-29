@@ -1,4 +1,4 @@
-## Project Outline
+## **Project Outline **
 
 365Hub is a brilliant approach to manage products using a single UI.
 Currently using this platform users can manage products, create and edit
@@ -6,9 +6,9 @@ them to the different channels. This platform will act as a hub for all
 365 instances like steelriver, alternascript, valley food storage, and
 others.
 
-## Getting Started
+## **Getting Started**
 
-### Prerequisite
+### **Prerequisite**
 
 -   Need XAMPP or any apache php based development environment
 
@@ -84,7 +84,7 @@ permissions are limited to modify like create permission or update
 permissions. Those permissions will not shown on edit role page. THose
 mostly are predefined permissions.
 
-##### **Company/Channels**
+### **Company/Channels**
 
 Users can create/edit companies and channels also they
 activate/deactivate them if they have that permissions. Every company
@@ -95,7 +95,7 @@ product.
 
 ![](media/image8.png){width="6.5in" height="2.0555555555555554in"}
 
-##### **Products**
+### **Products**
 
 Users can create/edit products through this system. Users can choose in
 which channels they want to import the product. They can import more
@@ -112,7 +112,7 @@ For now this instances are active
 
     -   SR Shopify (nicki's diapers sandbox)
 
-###### **Create Product Fields Specification - **
+#### **Create Product Fields Specification - **
 
 **Product Title** **(required)** - Title of the product
 
@@ -223,16 +223,16 @@ fulfil.
 
 > ![](media/image9.png){width="6.5in" height="3.263888888888889in"}
 
-#### 
+## 
 
-#### 
+## 
 
 
-#### **API Documentation**
+## **API Documentation**
 
 The following APIs belong to the Laravel routing. They are used throughout the system.
 
-##### **Sign Up**
+### **Sign Up**
 
 This API used for signing up into the system
 
@@ -255,7 +255,7 @@ This API used for signing up into the system
 }
 ```
 
-##### **Login**
+### **Login**
 
 This API used for login into the system
 
@@ -323,7 +323,7 @@ This API used for login into the system
 }
 ```
 
-##### **Forget Password**
+### **Forget Password**
 
 **GET**  **api/forget-password**
 
@@ -335,7 +335,7 @@ This API is used to reset user password
 | --- | --- | --- |
 | emali | Required |Should be a valid email | Email of the user |
 
-##### **Company**
+### **Company**
 
 **GET**  **api/admin/company**
 
@@ -468,7 +468,7 @@ This API is used to update status of company (active or inactive)
 }
 ```
 
-##### **Channel**
+### **Channel**
 
 **GET**  **api/admin/channel**
 
@@ -601,7 +601,7 @@ This API is used to update status of channel (active or inactive)
 }
 ```
 
-##### **User**
+### **User**
 
 **GET**  **api/admin/user**
 
@@ -725,7 +725,7 @@ This API is used to update authorized user&#39;s data
 }
 ```
 
-##### **Role**
+### **Role**
 
 **GET**  **api/admin/role**
 
@@ -836,7 +836,7 @@ This API is used to update existing role
 }
 ```
 
-##### **Permission**
+### **Permission**
 
 **GET**  **api/admin/permission**
 
@@ -899,7 +899,7 @@ This API is used to update permissions of a particular role
 }
 ```
 
-##### **Product**
+### **Product**
 
 **GET**  **api/admin/product**
 
@@ -1266,11 +1266,11 @@ This API is used to fetch all sticky category list from sticky
 
 This API is used to fetch list of country from fulfil
 
-#### **3rd Party API documentation**
+## **3rd Party API documentation**
 
 These APIs below are used from 3rd party crm like in Fulfil, Shopify and Sticky. These API are used to perform many different actions throughout the system like create product, update product etc.
 
-##### **Fulfil**
+### **Fulfil**
 
 **GET**  **/model/product.template**
 
@@ -1326,7 +1326,7 @@ This API is used to create a product template to Fulfil.
 
 Location: app\Instances\Fulfil.php Method: createProductTemplate
 
-##### **Sticky**
+### **Sticky**
 
 **GET**  **/v2/categories**
 
@@ -1346,7 +1346,7 @@ This API is used to update information of a product on Sticky.
 
 Location: app\Instances\Sticky.php Method: updateProductToSticky
 
-##### **Shopify**
+### **Shopify**
 
 **GET**  **/products/{id}.json?fields=handle**
 
@@ -1366,7 +1366,7 @@ This API is used to update information of a product on Shopify.
 
 Location: app\Instances\Shopify.php Method: updateProductToShopify
 
-#### **Citation information**
+## **Citation information**
 
 In this project we used laravel as back end and vue as frontend technology. In this project we also use fulfil, sticky, shopify crm and their APIs. We are using Laravel sanctum for Single Page Application.
 
@@ -1386,7 +1386,7 @@ Vue2-dropzone - [https://www.npmjs.com/package/vue2-dropzone](https://www.npmjs.
 
 Vuelidate - [https://vuelidate.js.org/#getting-started](https://vuelidate.js.org/#getting-started)
 
-##### References
+### References
 
 [https://laravel.com/docs/8.x](https://laravel.com/docs/8.x)
 
@@ -1398,6 +1398,6 @@ Vuelidate - [https://vuelidate.js.org/#getting-started](https://vuelidate.js.org
 
 [https://developers.fulfil.io/](https://developers.fulfil.io/)
 
-#### **Contributors**
+## **Contributors**
 
 Contributor of this project are CodeClouds team ([team@codeclouds.biz](mailto:team@codeclouds.biz))
